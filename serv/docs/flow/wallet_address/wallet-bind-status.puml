@@ -1,0 +1,20 @@
+@startuml
+note right
+    黄色表示有交互数据库的操作
+    红色表示跟keycloak服务有交互的操作
+end note
+start
+:解析、校验参数;
+if (token无效?) then (yes)
+    :提示token失效;
+    stop
+endif
+:根据","分割地址字段为数组;
+#yellow:基于钱包地址数组查找绑定关系记录以及关联用于sso_user_id;
+:初始化钱包绑定信息数组;
+repeat :遍历绑定关系记录列表;
+    :添加钱包绑定信息记录;
+repeat while (更多数据?)
+:返回结果数据;
+stop
+@enduml

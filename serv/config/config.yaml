@@ -1,0 +1,49 @@
+server:
+  port: 8085
+  # 0: panic 1: fatal 2: error 3: warn 4: info 5: debug 6: trace
+  LogLevel: 6
+  BybitPrivateKey: YycqcD9bIX1uRkFmSEtzSnFxenhzVC1QP1k2ZHp9
+
+database:
+  username: root
+  password: 2tRY$q5Ec&%Q
+  host: sg-cdb-7ykkm5v1.sql.tencentcdb.com
+  port: 63938
+  #  password: passw0rd
+  #  host: 127.0.0.1
+  #  port: 3306
+  DbName: b2-message
+  LogLevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: "passw0rd"
+  db: "0"
+  InsecureSkip: false
+  IsClusterMode: false
+  ClusterAddresses: ""
+
+blockchain:
+  - ChainId: 1123
+    RpcUrl: https://testnet-rpc.bsquared.network
+    InitBlockNumber: 4577994
+    InitBlockHash: 0x25fc3eee09cdba915458cf3c5a836e06eb9835596426347f2a5b0e70b0a58cf8
+    MessageAddress: 0xc7441Ac47596D1356fcc70062dA0462FcA98E14e
+    Senders: 67f20dc3b0842117c049b292dd88794b3321c95a1b607e735be88c34327420ba
+    # BusinessContract: 0x91171cf194a4B66Bd459Ada038397c7e890FB9D4
+    Events: 0x599c34a8d0b3638870afcfe3d7d8125602721889a7535cda986ea656e63fc38c,0x5849ae3f4bc77f0ebd2d6db4ff282f91f2191d3df4493e63176c2ed22fb81852
+  - ChainId: 421614
+    RpcUrl: https://arbitrum-sepolia.blockpi.network/v1/rpc/public
+    InitBlockNumber: 66437500
+    InitBlockHash: 0x372ed339d0e8f061696d02afdf50d8b162962694b01e025ecdec290d7b84acec
+    MessageAddress: 0x2A82058E46151E337Baba56620133FC39BD5B71F
+    Senders: 0x7990759362da82e88493fd64d058c5e011253ceb45902986590ef4acb0e97706
+    # BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
+    Events: 0x599c34a8d0b3638870afcfe3d7d8125602721889a7535cda986ea656e63fc38c,0x5849ae3f4bc77f0ebd2d6db4ff282f91f2191d3df4493e63176c2ed22fb81852
+
+Sentry:
+  Url: https://aaaceee77d2a12d819a9a025b1982950@sentry.bsquared.network/5
+  SampleRate: 0.2
+  Env: local
+  Release: 1.0.0

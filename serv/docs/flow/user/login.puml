@@ -1,0 +1,94 @@
+@startuml
+
+'一旦接口秘钥被破解，那是可以任意绑定账号和钱包
+'可能最好还是有签名信息，去验证签名,但是所有其他服务接口调用这个登录的时候，就必须有用户的签名
+note right
+    黄色表示有交互数据库的操作
+    红色表示跟keycloak服务有交互的操作
+    绿色表示异步操作
+end note
+start
+:解析、校验参数;
+if (token无效?) then (yes)
+    :提示token失效;
+    stop
+endif
+:初始化用户是否新注册为1;
+:初始化用户名为twitter_id字段;
+:切分钱包地址字段，转换为地址数组;
+if (twitter_id不为空?) then (yes)
+    partition "处理twitter id不为空的登录" {
+        #yellow:查询数据库用户名是twitter_id的记录;
+        if (用户记录存在?) then (yes)
+            :更新用户是否新注册为0;
+            if (wallet_address为空?) then (yes)
+                #red:使用twitter_id用户名，登录keycloak，获取用户token;
+                :构建返回体，返回;
+                stop
+            endif
+        endif
+        #yellow:根据钱包地址，查询绑定关系记录;
+        if (关系记录存在?) then (no)
+            if (是否新注册用户?) then (yes)
+                if (邀请码 != 系统初始邀请码) then (yes)
+                    #yellow:查询用户记录表，邀请码为请求邀请码的用户记录;
+                    if (邀请码用户记录不存在?) then (yes)
+                        :返回用户邀请码无效错误;
+                        stop
+                    endif
+                endif
+                :生成随机的邀请码串;
+                #red:调用keycloak接口, 创建用户;
+                #yellow:插入用户记录信息;
+                #green:(异步)插入邀请关系记录;
+                #green:(异步)转换sca地址;
+            endif
+            #yellow:插入用户钱包绑定关系记录;
+            #red:调用keycloak更新用户属性，添加钱包地址列表属性;
+        else (yes)
+            if (绑定钱包的用户id与用户记录的id不一致?) then (yes)
+                #yellow:查询用户信息记录;
+                if (用户记录的username != twitter_id) then (yes)
+                    #red:调用keycloak接口, 更新用户的用户名;
+                    #yellow:更新用户信息记录的username字段为twitter_id;
+                endif
+'                #yellow:查找绑定钱包用户id的记录;
+'                if (绑定钱包的用户注册方式是wallet?) then (yes)
+'                    #yellow:查询出所有绑定的钱包地址;
+'                    #yellow:更新所有绑定钱包用户id的绑定记录为新的用户ID;
+'                    #red:调用keycloak更新用户属性，添加钱包地址列表属性;
+'                endif
+'                note left
+'                只有当之前绑定的用户是只有钱包注册的时候，才会全部替换
+'                end note
+            endif
+        endif
+    }
+else (no)
+    partition "处理只有钱包地址的登录" {
+        #yellow:根据钱包地址，查询绑定关系记录;
+        if (关系记录存在?) then (yes)
+            #yellow:查找关联用户信息记录;
+            :设置用户名为关联用户的用户名;
+        else (no)
+            if (邀请码 != 系统初始邀请码) then (yes)
+                #yellow:查询用户记录表，邀请码为请求邀请码的用户记录;
+                if (邀请码用户记录不存在?) then (yes)
+                    :返回用户邀请码无效错误;
+                    stop
+                endif
+            endif
+            :生成随机的邀请码串;
+            :设置用户名为随机字符串;
+            #red:调用keycloak接口, 创建用户;
+            #yellow:插入用户记录信息;
+            #green:(异步)插入邀请关系记录;
+            #green:(异步)转换sca地址;
+        endif
+    }
+endif
+#red:使用twitter_id用户名，登录keycloak，获取用户token;
+:构建返回体，返回;
+stop
+
+@enduml

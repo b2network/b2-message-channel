@@ -1,0 +1,17 @@
+@startuml
+
+note right
+    黄色表示有交互数据库的操作
+    红色表示跟keycloak服务有交互的操作
+end note
+start
+:解析、校验参数;
+if (token无效?) then (yes)
+    :提示token失效;
+    stop
+endif
+#yellow:用户邀请记录表，基于邀请人ID分组，按照排序规则，查询count条记录;
+:返回结果数据;
+stop
+
+@enduml

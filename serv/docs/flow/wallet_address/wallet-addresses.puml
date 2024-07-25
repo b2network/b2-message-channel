@@ -1,0 +1,27 @@
+@startuml
+note right
+    黄色表示有交互数据库的操作
+    红色表示跟keycloak服务有交互的操作
+end note
+start
+:解析、校验参数;
+if (token无效?) then (yes)
+    :提示token失效;
+    stop
+endif
+:初始化钱包地址列表为空列表;
+:初始化总数为0;
+if (id不为空?) then (yes)
+    #yellow:通过sso_user_id查询用户记录;
+endif
+if (username不为空?) then (yes)
+    #yellow:通过username查询用户记录;
+endif
+if (用户记录存在?) then (yes)
+    #yellow:通过用户ID查找所有的钱包地址信息;
+    :更新钱包地址列表数据;
+    :更新总数;
+endif
+:返回数据;
+stop
+@enduml

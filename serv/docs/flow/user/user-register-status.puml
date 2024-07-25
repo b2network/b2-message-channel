@@ -1,0 +1,31 @@
+@startuml
+note right
+    黄色表示有交互数据库的操作
+    红色表示跟keycloak服务有交互的操作
+end note
+start
+:解析、校验参数;
+if (token无效?) then (yes)
+    :提示token失效;
+    stop
+endif
+:初始化已注册为0;
+if (用户名字段不为空?) then (yes)
+    #yellow:根据用户名以及注册方式为twitter, 查找用户记录;
+    if (用户记录存在?) then (yes)
+        :设置已注册为1;
+    endif
+endif
+if (钱包地址字段不为空?) then (yes)
+    :通过","切分地址字段为数组;
+    #yellow:查询在钱包地址数组中绑定的用户id;
+    if (已绑定用户ID不为空?) then (yes)
+        #yellow:查询用户信息;
+        if (用户注册方式为twitter?) then (yes)
+            :设置已注册为1;
+        endif
+    endif
+endif
+:根据已注册字段返回;
+stop
+@enduml
