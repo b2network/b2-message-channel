@@ -2,17 +2,13 @@ server:
   port: 8085
   # 0: panic 1: fatal 2: error 3: warn 4: info 5: debug 6: trace
   LogLevel: 6
-  BybitPrivateKey: YycqcD9bIX1uRkFmSEtzSnFxenhzVC1QP1k2ZHp9
 
 database:
   username: root
-  password: 2tRY$q5Ec&%Q
-  host: sg-cdb-7ykkm5v1.sql.tencentcdb.com
-  port: 63938
-  #  password: passw0rd
-  #  host: 127.0.0.1
-  #  port: 3306
-  DbName: b2-message
+  password: passw0rd
+  host: 127.0.0.1
+  port: 3306
+  DbName: b2_message
   LogLevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
 redis:
@@ -41,9 +37,3 @@ blockchain:
     Senders: 0x7990759362da82e88493fd64d058c5e011253ceb45902986590ef4acb0e97706
     # BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
     Events: 0x599c34a8d0b3638870afcfe3d7d8125602721889a7535cda986ea656e63fc38c,0x5849ae3f4bc77f0ebd2d6db4ff282f91f2191d3df4493e63176c2ed22fb81852
-
-Sentry:
-  Url: https://aaaceee77d2a12d819a9a025b1982950@sentry.bsquared.network/5
-  SampleRate: 0.2
-  Env: local
-  Release: 1.0.0
