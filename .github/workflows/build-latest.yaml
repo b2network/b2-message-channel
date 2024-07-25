@@ -15,10 +15,11 @@ jobs:
         with:
           image_name: ${{ github.repository }}  # it will be lowercased internally
           github_token: ${{ secrets.PERSONAL_TOKEN }}
+          dockerfile: ./serv/Dockerfile
       - name: clone repo
         run: git clone https://${{secrets.PERSONAL_USERNAME}}:${{secrets.PERSONAL_TOKEN}}@github.com/b2network/devops.git 
       - name: modify 
-        run: cd devops/devops_dev/buzz/ && sed -i "s/gitTag:.*/gitTag:\ '${{github.sha}}'/g"  ${{vars.DEVOPS_PROJECT}}/dev-values*.yaml 
+        run: cd devops/devops_dev/message-channel/ && sed -i "s/gitTag:.*/gitTag:\ '${{github.sha}}'/g"  ${{vars.DEVOPS_PROJECT}}/dev-values*.yaml 
       - name: commit && push
         run: |
           cd devops
