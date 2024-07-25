@@ -3,7 +3,8 @@ ARG GOPROXY=https://goproxy.cn
 COPY . /src
 RUN apt-get update && \
     cd /src && \
-    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./build/main cmd/app/main.go
+    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./build/api cmd/app/main.go
+RUN     go build -o ./build/listener cmd/listener/main.go
 # RUN apt-get update && apt install -y protobuf-compiler git && \
 #    cd /tmp && git clone https://github.com/googleapis/googleapis.git && \
 #    cp -r /tmp/googleapis/* /usr/local/include/ && \
@@ -17,6 +18,7 @@ RUN apt-get update && \
 # =====
 FROM alpine:latest
 WORKDIR "/src"
-COPY --from=builder /src/build/main /usr/bin/main
+COPY --from=builder /src/build/api /usr/bin/api
+COPY --from=builder /src/build/listener /usr/bin/listener
 COPY --from=builder /src/config/config.yaml /src/config/config.yaml
-CMD ["/usr/bin/main"]
+CMD ["/usr/bin/listener"]
