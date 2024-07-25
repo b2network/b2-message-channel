@@ -3,8 +3,7 @@ ARG GOPROXY=https://goproxy.cn
 COPY . /src
 RUN apt-get update && \
     cd /src/serv && \
-    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /src/build/api cmd/app/main.go
-RUN   cd /src/serv  &&  go build -o /src/build/listener cmd/listener/main.go
+    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /src/build/api cmd/app/main.go &&  go build -o /src/build/listener cmd/listener/main.go
 # RUN apt-get update && apt install -y protobuf-compiler git && \
 #    cd /tmp && git clone https://github.com/googleapis/googleapis.git && \
 #    cp -r /tmp/googleapis/* /usr/local/include/ && \
