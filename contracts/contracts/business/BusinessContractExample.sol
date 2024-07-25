@@ -35,9 +35,9 @@ contract BusinessContractExample is IBusinessContract, Initializable, UUPSUpgrad
     event Send(uint256 from_chain_id, uint256 from_id, address from_sender, bytes data);
 
     function send(uint256 from_chain_id, uint256 from_id, address from_sender, bytes calldata data) external onlyRole(SENDER_ROLE) override returns (bool success) {
-        // TODO 1. 验证 from_chain_id 和 from_sender 有效性
-        // TODO 2. 验证 from_id 是否执行过
-        // TODO 3. 解析 data 执行业务逻辑
+        // TODO 1. Verify the validity of from_chain_id and from_sender
+        // TODO 2. Verify that from_id has been executed
+        // TODO 3. Parse data and execute service logic
         emit Send(from_chain_id, from_id, from_sender, data);
         return true;
     }
