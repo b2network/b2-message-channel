@@ -2,9 +2,9 @@ FROM golang:latest as builder
 ARG GOPROXY=https://goproxy.cn
 COPY . /src
 RUN apt-get update && \
-    cd /src && \
-    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./build/api /src/serv/cmd/app/main.go
-RUN     go build -o ./build/listener /src/serv/cmd/listener/main.go
+    cd /src/serv && \
+    GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./build/api cmd/app/main.go
+RUN     go build -o ./build/listener cmd/listener/main.go
 # RUN apt-get update && apt install -y protobuf-compiler git && \
 #    cd /tmp && git clone https://github.com/googleapis/googleapis.git && \
 #    cp -r /tmp/googleapis/* /usr/local/include/ && \
