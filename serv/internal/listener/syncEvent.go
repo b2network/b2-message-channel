@@ -10,8 +10,9 @@ import (
 	"time"
 )
 
-func (l *Listener) syncEvent(duration time.Duration) {
+func (l *Listener) syncEvent() {
 	for {
+		duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 		var blocks []models.SyncBlock
 		err := l.Db.Where("chain_id=? AND (status=? OR status=?)", l.Blockchain.ChainId, models.BlockPending, models.BlockRollback).Order("block_number").Limit(50).Find(&blocks).Error
 		if err != nil {

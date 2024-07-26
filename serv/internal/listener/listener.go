@@ -5,7 +5,6 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"gorm.io/gorm"
-	"time"
 )
 
 type DataMap struct {
@@ -48,15 +47,15 @@ func NewListener(db *gorm.DB, cache *config.Cache, blockchain config.Blockchain)
 func (l *Listener) Run() {
 	l.loadAccounts()
 	l.AutoRegister()
-	go l.syncLatestBlockNumber(time.Second * 1)
-	go l.syncBlock(time.Second * 1)
-	go l.syncEvent(time.Second * 1)
-	go l.syncTask(time.Second * 1)
-	go l.checkBlock(time.Second * 10)
-	go l.migrateBlock(time.Second * 10)
-	go l.migrateEvent(time.Second * 10)
-	go l.consume(time.Second * 1)
-	go l.confirm(time.Second * 1)
-	go l.broadcast(time.Second * 1)
-	go l.build(time.Second * 1)
+	go l.syncLatestBlockNumber()
+	go l.syncBlock()
+	go l.syncEvent()
+	go l.syncTask()
+	go l.checkBlock()
+	go l.migrateBlock()
+	go l.migrateEvent()
+	go l.consume()
+	go l.confirm()
+	go l.broadcast()
+	go l.build()
 }

@@ -25,6 +25,23 @@ func Send(fromChainId int64, fromId int64, fromSender string, contractAddress st
 	SignaturesDataOffset := common.BytesToHash(big.NewInt(int64(224 + len(ToBytes))).Bytes()).Bytes()
 	SignaturesDataLength := common.BytesToHash(big.NewInt(int64(len(signatures))).Bytes()).Bytes()
 
+	var streamOffsets []byte
+	var streamData []byte
+	streamIndex := int64(32 * len(signatures))
+	for _, _signature := range signatures {
+		signatureDataOffset := common.BytesToHash(big.NewInt(streamIndex).Bytes()).Bytes()
+		streamOffsets = append(streamOffsets, signatureDataOffset...)
+
+		signature := common.FromHex(_signature)
+		signatureDataLength := common.BytesToHash(big.NewInt(int64(len(signature))).Bytes()).Bytes()
+		streamData = append(streamData, signatureDataLength...)
+		if len(signature)%32 > 0 {
+			signature = append(signature, make([]byte, 32-len(signature)%32)...)
+		}
+		streamData = append(streamData, signature...)
+		streamIndex = int64(32*len(signatures) + len(streamData))
+	}
+
 	var stream []byte
 	stream = append(stream, Method...)
 	stream = append(stream, FromChainId...)
@@ -36,5 +53,7 @@ func Send(fromChainId int64, fromId int64, fromSender string, contractAddress st
 	stream = append(stream, ToBytesDataLength...)
 	stream = append(stream, ToBytes...)
 	stream = append(stream, SignaturesDataLength...)
+	stream = append(stream, streamOffsets...)
+	stream = append(stream, streamData...)
 	return stream
 }

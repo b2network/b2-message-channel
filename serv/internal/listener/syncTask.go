@@ -11,11 +11,17 @@ import (
 	"time"
 )
 
-func (l *Listener) syncTask(duration time.Duration) {
+func (l *Listener) syncTask() {
 	for {
+		duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 		var tasks []models.SyncTask
 		err := l.Db.Where("chain_id=? AND status=?", l.Blockchain.ChainId, models.SyncTaskPending).Limit(20).Find(&tasks).Error
 		if err != nil {
+			time.Sleep(duration)
+			continue
+		}
+		if len(tasks) == 0 {
+			log.Infof("[Handler.syncTask] Pending tasks count is 0\n")
 			time.Sleep(duration)
 			continue
 		}
@@ -32,7 +38,6 @@ func (l *Listener) syncTask(duration time.Duration) {
 
 		}
 		wg.Wait()
-		time.Sleep(duration)
 	}
 }
 

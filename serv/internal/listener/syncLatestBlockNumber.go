@@ -6,8 +6,9 @@ import (
 	"time"
 )
 
-func (l *Listener) syncLatestBlockNumber(duration time.Duration) {
+func (l *Listener) syncLatestBlockNumber() {
 	for {
+		duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 		latest, err := l.RPC.BlockNumber(context.Background())
 		if err != nil {
 			log.Errorf("[Handle.LatestBlackNumber][%d]Syncing latest block number error: %s\n", l.Blockchain.ChainId, err)

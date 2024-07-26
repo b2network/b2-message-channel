@@ -20,7 +20,8 @@ import (
 	"time"
 )
 
-func (l *Listener) build(duration time.Duration) {
+func (l *Listener) build() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
 		list, err := l.pendingCallMessage(10)
 		if err != nil {
@@ -42,13 +43,10 @@ func (l *Listener) build(duration time.Duration) {
 				err = l.buildMessage(message)
 				if err != nil {
 					log.Errorf("Handle err: %v, %v\n", err, message)
-					time.Sleep(500 * time.Millisecond)
 				}
 			}(&wg, message)
 		}
 		wg.Wait()
-
-		time.Sleep(duration)
 	}
 }
 

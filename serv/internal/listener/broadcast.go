@@ -12,7 +12,8 @@ import (
 	"time"
 )
 
-func (l *Listener) broadcast(duration time.Duration) {
+func (l *Listener) broadcast() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
 		var signatures []models.Signature
 		err := l.Db.Where("`chain_id`=? AND `status`=?", l.Blockchain.ChainId, enums.SignatureStatusPending).Order("id").Limit(100).Find(&signatures).Error
@@ -35,12 +36,10 @@ func (l *Listener) broadcast(duration time.Duration) {
 				err = l.broadcastSignature(signature)
 				if err != nil {
 					log.Errorf("Broadcast signature err[%d]: %s\n", signature.Id, err)
-					time.Sleep(500 * time.Millisecond)
 				}
 			}(&wg, signature)
 		}
 		wg.Wait()
-		time.Sleep(duration)
 	}
 }
 

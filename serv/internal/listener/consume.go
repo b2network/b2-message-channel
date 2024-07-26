@@ -11,16 +11,18 @@ import (
 	"time"
 )
 
-func (l *Listener) consume(duration time.Duration) {
+func (l *Listener) consume() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
-		time.Sleep(duration)
 		events, err := l.listPendingEvent(500)
 		if err != nil {
 			log.Errorf("list pending event err: %v\n", err)
+			time.Sleep(duration)
 			continue
 		}
 		if len(events) == 0 {
 			log.Infof("list pending event length is 0\n")
+			time.Sleep(duration)
 			continue
 		}
 		valids := make([]int64, 0)
@@ -48,6 +50,7 @@ func (l *Listener) consume(duration time.Duration) {
 				err := (&messageCall).ToObj(event.Data)
 				if err != nil {
 					log.Errorf("event to data err: %v, data: %v\n", err, event)
+					time.Sleep(duration)
 					continue
 				}
 				FromChainId = messageCall.FromChainId
@@ -77,6 +80,7 @@ func (l *Listener) consume(duration time.Duration) {
 			err = l.Db.Where("`tx_hash`=? AND `log_index`=?", event.TxHash, event.BlockLogIndexed).First(&message).Error
 			if err != nil && !errors.Is(err, gorm.ErrRecordNotFound) {
 				log.Errorf("get message err: %v, data: %v\n", err, event)
+				time.Sleep(duration)
 				continue
 			} else if errors.Is(err, gorm.ErrRecordNotFound) {
 				handles[key] = true
@@ -132,6 +136,7 @@ func (l *Listener) consume(duration time.Duration) {
 		})
 		if err != nil {
 			log.Errorf("consume events err: %v\n", err)
+			time.Sleep(duration)
 		}
 	}
 }

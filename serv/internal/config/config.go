@@ -38,6 +38,7 @@ type Blockchain struct {
 	MessageAddress  string
 	Events          string
 	Senders         string
+	BlockInterval   int64
 }
 
 type SentryConfig struct {

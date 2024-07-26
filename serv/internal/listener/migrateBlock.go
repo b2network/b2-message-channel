@@ -9,7 +9,8 @@ import (
 	"time"
 )
 
-func (l *Listener) migrateBlock(duration time.Duration) {
+func (l *Listener) migrateBlock() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
 		queryBlockNum := l.SyncedBlockNumber - 100000
 		if queryBlockNum < 100 {

@@ -11,8 +11,8 @@ import (
 	"time"
 )
 
-func (l *Listener) syncBlock(duration time.Duration) {
-	time.Sleep(duration)
+func (l *Listener) syncBlock() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	var syncedBlock models.SyncBlock
 	err := l.Db.Where("chain_id =? AND (status = ? or status = ?) ", l.Blockchain.ChainId, models.BlockValid, models.BlockPending).Order("block_number desc").First(&syncedBlock).Error
 	if err != nil && err != gorm.ErrRecordNotFound {
@@ -31,7 +31,7 @@ func (l *Listener) syncBlock(duration time.Duration) {
 		log.Infof("[Handler.SyncBlock] Try to sync block number: %d\n", syncingBlockNumber)
 
 		if syncingBlockNumber > l.LatestBlockNumber {
-			time.Sleep(3 * time.Second)
+			time.Sleep(duration)
 			continue
 		}
 
@@ -39,18 +39,17 @@ func (l *Listener) syncBlock(duration time.Duration) {
 		blockJson, err := rpc2.HttpPostJson("", l.Blockchain.RpcUrl, "{\"jsonrpc\":\"2.0\",\"method\":\"eth_getBlockByNumber\",\"params\":[\""+fmt.Sprintf("0x%X", syncingBlockNumber)+"\", true],\"id\":1}")
 		if err != nil {
 			log.Errorf("[Handler.SyncBlock] Syncing block by number error: %s\n", errors.WithStack(err))
-			time.Sleep(3 * time.Second)
+			time.Sleep(duration)
 			continue
 		}
 		block := rpc2.ParseJsonBlock(string(blockJson))
-		log.Infof("[Handler.SyncBlock] Syncing block number: %d, hash: %v, parent hash: %v \n", block.Number(), block.Hash(), block.ParentHash())
-		// 回滚判断
-		fmt.Println("block.ParentHash", block.ParentHash())
-		fmt.Println("SyncedBlockHash", l.SyncedBlockHash.String())
+		log.Infof("[Handler.SyncBlock] Syncing block number: %d, hash: %s, parent hash: %s,synced parent hash: %s \n", block.Number(), block.Hash(), block.ParentHash(), l.SyncedBlockHash)
 
+		// 回滚判断
 		if common.HexToHash(block.ParentHash()) != l.SyncedBlockHash {
 			log.Errorf("[Handler.SyncBlock] ParentHash of the block being synchronized is inconsistent: %s \n", l.SyncedBlockHash)
 			l.rollbackBlock()
+			time.Sleep(duration)
 			continue
 		}
 
@@ -68,7 +67,7 @@ func (l *Listener) syncBlock(duration time.Duration) {
 		}).Error
 		if err != nil {
 			log.Errorf("[Handler.SyncBlock] Db Create SyncBlock error: %s\n", errors.WithStack(err))
-			time.Sleep(1 * time.Second)
+			time.Sleep(duration)
 			continue
 		}
 		/* Create SyncBlock end */

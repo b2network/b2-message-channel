@@ -9,7 +9,8 @@ import (
 	"time"
 )
 
-func (l *Listener) checkBlock(duration time.Duration) {
+func (l *Listener) checkBlock() {
+	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
 		var blocks []models.SyncBlock
 		// only check last 1000 block and  event_count is 0 and Valid
@@ -41,8 +42,9 @@ func (l *Listener) checkBlock(duration time.Duration) {
 					log.Errorf("[Handle.CheckBlock] Check Block err: %s\n", errors.WithStack(err))
 				}
 			}
+		} else {
+			time.Sleep(duration)
 		}
-		time.Sleep(duration)
 	}
 }
 
