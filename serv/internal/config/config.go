@@ -158,13 +158,15 @@ func LoadConfig() AppConfig {
 	if err := v.Unmarshal(&config); err != nil {
 		panic(err)
 	}
-	var blockchains []Blockchain
-	blockchainsJson := v.GetString("BLOCKCHAINS")
-	err = json.Unmarshal([]byte(blockchainsJson), &blockchains)
-	if err != nil {
-		panic(err)
-	}
-	config.Blockchain = blockchains
 
+	blockchainsJson := v.GetString("BLOCKCHAINS")
+	if blockchainsJson != "" {
+		var blockchains []Blockchain
+		err = json.Unmarshal([]byte(blockchainsJson), &blockchains)
+		if err != nil {
+			panic(err)
+		}
+		config.Blockchain = blockchains
+	}
 	return config
 }
