@@ -1,6 +1,7 @@
 package config
 
 import (
+	"encoding/json"
 	"github.com/spf13/viper"
 	"strings"
 )
@@ -157,6 +158,13 @@ func LoadConfig() AppConfig {
 	if err := v.Unmarshal(&config); err != nil {
 		panic(err)
 	}
+	var blockchains []Blockchain
+	blockchainsJson := v.GetString("BLOCKCHAINS")
+	err = json.Unmarshal([]byte(blockchainsJson), &blockchains)
+	if err != nil {
+		panic(err)
+	}
+	config.Blockchain = blockchains
 
 	return config
 }
