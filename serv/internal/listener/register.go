@@ -34,10 +34,19 @@ func (l *Listener) loadAccounts() {
 	for i, accountKey := range senders {
 		accountAddress, err := l.ToAddress(accountKey)
 		if err != nil {
-			log.Panicf("WithdrawAccounts[%d] invalid", i)
+			log.Panicf("senders[%d] invalid", i)
 			continue
 		}
 		l.DataMap.SenderMap[accountAddress] = accountKey
+	}
+	validators := strings.Split(l.Blockchain.Validators, ",")
+	for i, accountKey := range validators {
+		accountAddress, err := l.ToAddress(accountKey)
+		if err != nil {
+			log.Panicf("validators[%d] invalid", i)
+			continue
+		}
+		l.DataMap.ValidatorMap[accountAddress] = accountKey
 	}
 }
 

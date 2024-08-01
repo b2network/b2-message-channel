@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/hex"
+	"encoding/json"
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
@@ -76,7 +77,13 @@ func (l *Listener) buildMessage(message models.Message) error {
 	toAddress := common.HexToAddress(l.Blockchain.MessageAddress)
 	log.Debugf("toAddress: %v\n", toAddress)
 
-	data := msg.Send(message.FromChainId, message.FromId, message.FromSender, message.ToContractAddress, message.ToBytes, nil)
+	var signatures []string
+	err = json.Unmarshal([]byte(message.Signatures), &signatures)
+	if err != nil {
+		return errors.WithStack(err)
+	}
+
+	data := msg.Send(message.FromChainId, message.FromId, message.FromSender, message.ToContractAddress, message.ToBytes, signatures)
 	log.Debugf("data: %x\n", data)
 	gasLimit, err := l.RPC.EstimateGas(context.Background(), ethereum.CallMsg{
 		From:     common.HexToAddress(UserAddress),

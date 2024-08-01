@@ -11,7 +11,8 @@ const (
 type MessageStatus int64
 
 const (
-	MessageStatusPending MessageStatus = iota
+	MessageStatusValidating MessageStatus = iota
+	MessageStatusPending
 	MessageStatusBroadcast
 	MessageStatusValid
 	MessageStatusInvalid

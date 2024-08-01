@@ -8,10 +8,11 @@ import (
 )
 
 type DataMap struct {
-	Events    []common.Hash
-	Contracts []common.Address
-	EventMap  map[common.Hash][]Event
-	SenderMap map[string]string
+	Events       []common.Hash
+	Contracts    []common.Address
+	EventMap     map[common.Hash][]Event
+	SenderMap    map[string]string
+	ValidatorMap map[string]string
 }
 
 type Listener struct {
@@ -36,10 +37,11 @@ func NewListener(db *gorm.DB, cache *config.Cache, blockchain config.Blockchain)
 		SyncedBlockNumber: 0,
 		SyncedBlockHash:   common.HexToHash("0x0"),
 		DataMap: DataMap{
-			Events:    make([]common.Hash, 0),
-			Contracts: make([]common.Address, 0),
-			EventMap:  make(map[common.Hash][]Event, 0),
-			SenderMap: make(map[string]string, 0),
+			Events:       make([]common.Hash, 0),
+			Contracts:    make([]common.Address, 0),
+			EventMap:     make(map[common.Hash][]Event, 0),
+			SenderMap:    make(map[string]string, 0),
+			ValidatorMap: make(map[string]string, 0),
 		},
 	}
 }
@@ -47,15 +49,16 @@ func NewListener(db *gorm.DB, cache *config.Cache, blockchain config.Blockchain)
 func (l *Listener) Run() {
 	l.loadAccounts()
 	l.AutoRegister()
-	go l.syncLatestBlockNumber()
-	go l.syncBlock()
-	go l.syncEvent()
-	go l.syncTask()
-	go l.checkBlock()
-	go l.migrateBlock()
-	go l.migrateEvent()
-	go l.consume()
-	go l.confirm()
-	go l.broadcast()
-	go l.build()
+	//go l.syncLatestBlockNumber()
+	//go l.syncBlock()
+	//go l.syncEvent()
+	//go l.syncTask()
+	//go l.checkBlock()
+	//go l.migrateBlock()
+	//go l.migrateEvent()
+	//go l.consume()
+	//go l.confirm()
+	//go l.broadcast()
+	//go l.build()
+	//go l.validate()
 }

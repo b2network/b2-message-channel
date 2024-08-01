@@ -13,6 +13,7 @@ type Message struct {
 	ToChainId           int64               `json:"to_chain_id"`
 	ToContractAddress   string              `json:"to_contract_address"`
 	ToBytes             string              `json:"to_bytes"`
+	Signatures          string              `json:"signatures"`
 	Status              enums.MessageStatus `json:"status"`
 	Blockchain
 }
