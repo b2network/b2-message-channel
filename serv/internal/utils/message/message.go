@@ -66,12 +66,12 @@ const MessageSendTypedData = `{
     },
     "primaryType":"Send",
     "message":{
-        "from_chain_id":"%s",
-        "from_id":"%s",
+        "from_chain_id":"%d",
+        "from_id":"%d",
         "from_sender":"%s",
-        "to_chain_id":"%s",
+        "to_chain_id":"%d",
         "contract_address":"%s",
-        "data":%s
+        "data":"%s"
     }
 }`
 
@@ -90,5 +90,10 @@ func SignMessageSend(chainId int64, messageContract string, fromChainId int64, f
 	if err != nil {
 		return "", errors.WithStack(err)
 	}
-	return common.Bytes2Hex(sig), nil
+	if sig[64] == 0 {
+		sig[64] = 27
+	} else if sig[64] == 1 {
+		sig[64] = 28
+	}
+	return "0x" + common.Bytes2Hex(sig), nil
 }

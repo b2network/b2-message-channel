@@ -776,8 +776,8 @@
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-channel/contracts/contracts/business/BusinessContractExample.sol": {
-      "lastModificationDate": 1721791042694,
-      "contentHash": "418294fdebbcefd0f756c3abeb12650a",
+      "lastModificationDate": 1721898040459,
+      "contentHash": "a06f9fca36c78543e58f14b62f94a097",
       "sourceName": "contracts/business/BusinessContractExample.sol",
       "solcConfig": {
         "version": "0.8.20",

@@ -102,3 +102,6 @@ fabric.properties
 
 .idea/
 
+.openzeppelin
+contracts/artifacts/*
+contracts/cache/*

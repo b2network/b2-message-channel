@@ -37,6 +37,7 @@ func (l *Listener) consume() {
 		var ToChainId int64
 		var ToContractAddress string
 		var ToBytes string
+		var status enums.MessageStatus
 
 		for _, event := range events {
 			key := fmt.Sprintf("%s#%d", event.TxHash, event.BlockLogIndexed)
@@ -60,6 +61,7 @@ func (l *Listener) consume() {
 				ToContractAddress = messageCall.ContractAddress
 				ToBytes = messageCall.Bytes
 				Type = enums.MessageTypeCall
+				status = enums.MessageStatusValidating
 			} else if event.EventName == message.MessageSendName {
 				var messageSend message.MessageSend
 				err := (&messageSend).ToObj(event.Data)
@@ -74,6 +76,7 @@ func (l *Listener) consume() {
 				ToContractAddress = messageSend.ContractAddress
 				ToBytes = messageSend.Bytes
 				Type = enums.MessageTypeSend
+				status = enums.MessageStatusPending
 			}
 
 			var message models.Message
@@ -94,7 +97,8 @@ func (l *Listener) consume() {
 					ToChainId:           ToChainId,
 					ToContractAddress:   ToContractAddress,
 					ToBytes:             ToBytes,
-					Status:              enums.MessageStatusPending,
+					Signatures:          "[]",
+					Status:              status,
 					Blockchain: models.Blockchain{
 						EventId:     event.Id,
 						BlockTime:   event.BlockTime,

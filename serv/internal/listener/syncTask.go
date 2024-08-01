@@ -58,7 +58,7 @@ func (l *Listener) HandleTake(task models.SyncTask) error {
 		start = task.StartBlock
 	}
 
-	if start > task.EndBlock {
+	if task.EndBlock > 0 && start > task.EndBlock {
 		log.Infof("[Handler.SyncTask]  Handle task has done")
 		task.Status = models.SyncTaskDone
 		l.Db.Save(&task)
@@ -68,8 +68,11 @@ func (l *Listener) HandleTake(task models.SyncTask) error {
 	if task.HandleNum > 0 {
 		end = start + task.HandleNum - 1
 	}
-	if end > task.EndBlock {
+	if task.EndBlock > 0 && end > task.EndBlock {
 		end = task.EndBlock
+	}
+	if end > l.LatestBlockNumber {
+		end = l.LatestBlockNumber
 	}
 
 	Contracts := GetContracts(task.Contracts)

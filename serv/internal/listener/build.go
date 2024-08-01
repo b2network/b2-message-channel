@@ -72,6 +72,7 @@ func (l *Listener) buildMessage(message models.Message) error {
 	if err != nil {
 		return errors.WithStack(err)
 	}
+	//gasPrice := big.NewInt(1000)
 	log.Debugf("gasPrice: %v\n", gasPrice)
 
 	toAddress := common.HexToAddress(l.Blockchain.MessageAddress)
@@ -112,7 +113,7 @@ func (l *Listener) buildMessage(message models.Message) error {
 			return errors.WithStack(err)
 		}
 		_txHash := crypto.Keccak256Hash(_signature)
-		log.Debugf("txHash: %s, signature: %s\n", _txHash, _signature)
+		log.Debugf("txHash: %s, signature: %s\n", _txHash, hex.EncodeToString(_signature))
 
 		// create signature
 		err = l.CreateSignature(tx, message.ToChainId, message.FromId, UserAddress, int64(nonce), enums.MessageTypeSend, hex.EncodeToString(data), decimal.Zero, hex.EncodeToString(_signature), _txHash.Hex())

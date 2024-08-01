@@ -5,9 +5,9 @@ server:
 
 database:
   username: root
-  password: passw0rd
-  host: 127.0.0.1
-  port: 3306
+  password: 2tRY$q5Ec&%Q
+  host: sg-cdb-7ykkm5v1.sql.tencentcdb.com
+  port: 63938
   DbName: b2_message
   LogLevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
@@ -22,6 +22,7 @@ redis:
 
 blockchain:
   - ChainId: 1123
+    Rollback: false
     RpcUrl: https://testnet-rpc.bsquared.network
     InitBlockNumber: 4577994
     InitBlockHash: 0x25fc3eee09cdba915458cf3c5a836e06eb9835596426347f2a5b0e70b0a58cf8
@@ -32,12 +33,13 @@ blockchain:
     # BusinessContract: 0x91171cf194a4B66Bd459Ada038397c7e890FB9D4
     Events: 0x599c34a8d0b3638870afcfe3d7d8125602721889a7535cda986ea656e63fc38c,0x5849ae3f4bc77f0ebd2d6db4ff282f91f2191d3df4493e63176c2ed22fb81852
   - ChainId: 421614
-    RpcUrl: https://arbitrum-sepolia.blockpi.network/v1/rpc/public
+    Rollback: false
+    RpcUrl: https://cosmological-green-spring.arbitrum-sepolia.quiknode.pro/e41990a3263b68eecb26a88d3b3122185798613e/
     InitBlockNumber: 68116018
     InitBlockHash: 0xf9e7820aca608ccb6131b56ade99617bca6e96b91cca80b92e026cd26cc91714
     MessageAddress: 0x2A82058E46151E337Baba56620133FC39BD5B71F
     Senders: 0x7990759362da82e88493fd64d058c5e011253ceb45902986590ef4acb0e97706
     Validators: 0x7990759362da82e88493fd64d058c5e011253ceb45902986590ef4acb0e97706
-    BlockInterval: 250
+    BlockInterval: 100
     # BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
     Events: 0x599c34a8d0b3638870afcfe3d7d8125602721889a7535cda986ea656e63fc38c,0x5849ae3f4bc77f0ebd2d6db4ff282f91f2191d3df4493e63176c2ed22fb81852

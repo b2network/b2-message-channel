@@ -5,6 +5,7 @@ import (
 	"bsquared.network/b2-message-channel-serv/internal/models"
 	"bsquared.network/b2-message-channel-serv/internal/utils/message"
 	"encoding/json"
+	"fmt"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/pkg/errors"
@@ -16,7 +17,7 @@ import (
 func (l *Listener) validate() {
 	duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 	for {
-		list, err := l.pendingCallMessage(10)
+		list, err := l.validatingCallMessage(10)
 		if err != nil {
 			log.Errorf("Get pending call message err: %s\n", err)
 			time.Sleep(duration)
@@ -44,16 +45,19 @@ func (l *Listener) validate() {
 }
 
 func (l *Listener) validateMessage(msg models.Message) error {
+	log.Infof("handle validateMessage\n")
 	var signatures []string
 	for _, validatorKey := range l.DataMap.ValidatorMap {
 		_key, err := crypto.ToECDSA(common.FromHex(validatorKey))
 		if err != nil {
 			return errors.WithStack(err)
 		}
+		log.Infof("key:%v\n", _key)
 		signature, err := message.SignMessageSend(l.Blockchain.ChainId, l.Blockchain.MessageAddress, msg.FromChainId, msg.FromId, msg.FromSender, msg.ToChainId, msg.ToContractAddress, msg.ToBytes, _key)
 		if err != nil {
 			return errors.WithStack(err)
 		}
+		//if signature
 		signatures = append(signatures, signature)
 	}
 
@@ -61,11 +65,12 @@ func (l *Listener) validateMessage(msg models.Message) error {
 	if err != nil {
 		return errors.WithStack(err)
 	}
+	//log.Infof("validateMessage signatures:%s\n", string(_signatures))
+	fmt.Println("signatures:", string(_signatures))
 
-	err = l.Db.Where("`id`=? AND `status`=?", msg.Id, enums.MessageStatusValidating).Updates(map[string]interface{}{
-		"signatures": string(_signatures),
-		"status":     enums.MessageStatusPending,
-	}).Error
+	err = l.Db.Model(models.Message{}).Where("`id`=? AND `status`=?", msg.Id, enums.MessageStatusValidating).
+		Update("signatures", string(_signatures)).
+		Update("status", enums.MessageStatusPending).Error
 	if err != nil {
 		return errors.WithStack(err)
 	}

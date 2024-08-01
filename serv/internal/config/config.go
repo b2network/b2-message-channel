@@ -33,6 +33,7 @@ type Redis struct {
 
 type Blockchain struct {
 	ChainId         int64
+	Rollback        bool
 	RpcUrl          string
 	InitBlockNumber int64
 	InitBlockHash   string
