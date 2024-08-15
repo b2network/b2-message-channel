@@ -8,7 +8,7 @@ import (
 type Signature struct {
 	Base
 	ChainId   int64                 `json:"chain_id"`
-	ReferId   int64                 `json:"refer_id"`
+	ReferId   string                `json:"refer_id"`
 	Type      enums.MessageType     `json:"type"`
 	Address   string                `json:"address"`
 	Nonce     int64                 `json:"nonce"`

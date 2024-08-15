@@ -1,6 +1,7 @@
-package listener
+package eth
 
 import (
+	"bsquared.network/b2-message-channel-serv/internal/enums"
 	"bsquared.network/b2-message-channel-serv/internal/models"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
@@ -15,7 +16,7 @@ func (l *Listener) syncTask() {
 	for {
 		duration := time.Millisecond * time.Duration(l.Blockchain.BlockInterval)
 		var tasks []models.SyncTask
-		err := l.Db.Where("chain_id=? AND status=?", l.Blockchain.ChainId, models.SyncTaskPending).Limit(20).Find(&tasks).Error
+		err := l.Db.Where("`chain_type`=? AND chain_id=? AND status=?", enums.ChainTypeEthereum, l.Blockchain.ChainId, models.SyncTaskPending).Limit(20).Find(&tasks).Error
 		if err != nil {
 			time.Sleep(duration)
 			continue

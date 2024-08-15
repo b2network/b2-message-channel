@@ -27,3 +27,20 @@ const (
 	SignatureStatusFailed
 	SignatureStatusInvalid
 )
+
+type ChainType int64
+
+const (
+	ChainTypeUnknown ChainType = iota
+	ChainTypeEthereum
+	ChainTypeBitcoin
+)
+
+type DepositStatus int64
+
+const (
+	DepositStatusUnknown DepositStatus = iota
+	DepositStatusPending
+	DepositStatusValid
+	DepositStatusInvalid
+)

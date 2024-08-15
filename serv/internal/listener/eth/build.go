@@ -1,4 +1,4 @@
-package listener
+package eth
 
 import (
 	msg "bsquared.network/b2-message-channel-serv/internal/contract/message"
@@ -84,7 +84,7 @@ func (l *Listener) buildMessage(message models.Message) error {
 		return errors.WithStack(err)
 	}
 
-	data := msg.Send(message.FromChainId, message.FromId, message.FromSender, message.ToContractAddress, message.ToBytes, signatures)
+	data := msg.Send(message.FromChainId, common.HexToHash(message.FromId).Big(), message.FromSender, message.ToContractAddress, message.ToBytes, signatures)
 	log.Debugf("data: %x\n", data)
 	gasLimit, err := l.RPC.EstimateGas(context.Background(), ethereum.CallMsg{
 		From:     common.HexToAddress(UserAddress),
@@ -209,7 +209,7 @@ func (l *Listener) GetNonce(userAddress string) (uint64, error) {
 	}
 }
 
-func (l *Listener) CreateSignature(tx *gorm.DB, chainId int64, referId int64, address string, nonce int64, signatureType enums.MessageType, data string, value decimal.Decimal, signature string, txHash string) error {
+func (l *Listener) CreateSignature(tx *gorm.DB, chainId int64, referId string, address string, nonce int64, signatureType enums.MessageType, data string, value decimal.Decimal, signature string, txHash string) error {
 	err := tx.Create(&models.Signature{
 		ChainId:   chainId,
 		ReferId:   referId,

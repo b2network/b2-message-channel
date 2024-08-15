@@ -1,4 +1,4 @@
-package listener
+package eth
 
 import (
 	"bsquared.network/b2-message-channel-serv/internal/enums"
@@ -53,7 +53,7 @@ func (l *Listener) validateMessage(msg models.Message) error {
 			return errors.WithStack(err)
 		}
 		log.Infof("key:%v\n", _key)
-		signature, err := message.SignMessageSend(l.Blockchain.ChainId, l.Blockchain.MessageAddress, msg.FromChainId, msg.FromId, msg.FromSender, msg.ToChainId, msg.ToContractAddress, msg.ToBytes, _key)
+		signature, err := message.SignMessageSend(l.Blockchain.ChainId, l.Blockchain.MessageAddress, msg.FromChainId, common.HexToHash(msg.FromId).Big(), msg.FromSender, msg.ToChainId, msg.ToContractAddress, msg.ToBytes, _key)
 		if err != nil {
 			return errors.WithStack(err)
 		}

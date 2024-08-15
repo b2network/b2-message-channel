@@ -9,7 +9,6 @@ async function main() {
     /**
      * b2dev: yarn hardhat run scripts/message/call.js --network b2dev
      * as: yarn hardhat run scripts/message/call.js --network as
-     * b2: yarn hardhat run scripts/message/call.js --network b2
      */
 
     const [owner] = await ethers.getSigners()
@@ -25,9 +24,6 @@ async function main() {
         businessAddress = "0x91171cf194a4B66Bd459Ada038397c7e890FB9D4";
         to_chain_id = 1123;
         data = '0x1234';
-    } else if (network.name == 'b2') {
-        messageAddress = "";
-        businessAddress = "";
     }
 
     const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");

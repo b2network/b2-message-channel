@@ -1,21 +1,42 @@
 package main
 
 import (
-	"bsquared.network/b2-message-channel-serv/internal/contract/message"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/ethereum/go-ethereum/common"
 )
 
 func main() {
-	//fromChainId int64, fromId int64, fromSender string, contractAddress string, toBytes []byte, signatures [][]byte
-	var fromChainId int64 = 1123
-	var fromId int64 = 1
-	var fromSender = "0x9cc4669bb997c40579f89E08980B99218abaE3FE"
-	var contractAddress = "0x1c66cBEE6d4660459Fda5aa936e727398175E981"
-	var toBytes = "0x1234"
-	var signatures = make([]string, 0)
-	signatures = append(signatures, "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020003", "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020004")
+	txId := "fee63a7c0cf184824ba4fb5ea0be625ac673ab0e97ecf5e386b6805ac6ab869e"
+	//fromAddress := "bc1q2uduc360s3s3jww4nwnzn3yhad7ry0ldjkfr79"
+	//toAddress := "0xeF9B26046a2392C956320200eE0818543aA96aB7"
+	//amount := decimal.New(1212, 0)
+	//data := message.EncodeSendData(txId, fromAddress, toAddress, amount)
+	//fmt.Println(hexutil.Encode(data))
 
-	data := message.Send(fromChainId, fromId, fromSender, contractAddress, toBytes, signatures)
-	fmt.Println(hexutil.Encode(data))
+	//num := big.NewInt(0)
+	//num.SetBytes(hexutil.MustDecode(txId))
+	//fmt.Println(num.Text(16))
+	fmt.Println(common.HexToHash(txId))
+
+	// 0xfee63a7c0cf184824ba4fb5ea0be625ac673ab0e97ecf5e386b6805ac6ab869e0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000ef9b26046a2392c956320200ee0818543aa96ab700000000000000000000000000000000000000000000000000000000000004bc000000000000000000000000000000000000000000000000000000000000002a626331713275647563333630733373336a7777346e776e7a6e3379686164377279306c646a6b6672373900000000000000000000000000000000000000000000
+	// 0xfee63a7c0cf184824ba4fb5ea0be625ac673ab0e97ecf5e386b6805ac6ab869e0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000ef9b26046a2392c956320200ee0818543aa96ab700000000000000000000000000000000000000000000000000000000000004bc000000000000000000000000000000000000000000000000000000000000002a626331713275647563333630733373336a7777346e776e7a6e3379686164377279306c646a6b6672373900000000000000000000000000000000000000000000
+	//bclient, err := rpcclient.New(&rpcclient.ConnConfig{
+	//	Host:         "129.226.198.246:8332",
+	//	Host: "indulgent-floral-bird.btc.quiknode.pro/1df147114bdfd6f119d1a5eef706c91b3710ca6e",
+	//	//Host:         "divine-patient-meadow.btc-testnet.quiknode.pro/36ade4989e57ddd507d9790dec479606cbe8c0c6",
+	//	User:         "bnan",
+	//	Pass:         "bnan2021",
+	//	HTTPPostMode: true,  // Bitcoin core only supports HTTP POST mode
+	//	DisableTLS:   false, // Bitcoin core does not provide TLS by default
+	//}, nil)
+	//if err != nil {
+	//	fmt.Println("new: ", err.Error())
+	//	return
+	//}
+	//ChainInfo, err := bclient.GetBlockCount()
+	//if err != nil {
+	//	fmt.Println("get: ", err.Error())
+	//	return
+	//}
+	//fmt.Println("ChainInfo: ", ChainInfo)
 }

@@ -9,6 +9,7 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 	"github.com/pkg/errors"
 	"github.com/storyicon/sigverify"
+	"math/big"
 )
 
 const MessageSendTypedData = `{
@@ -67,7 +68,7 @@ const MessageSendTypedData = `{
     "primaryType":"Send",
     "message":{
         "from_chain_id":"%d",
-        "from_id":"%d",
+        "from_id":"%s",
         "from_sender":"%s",
         "to_chain_id":"%d",
         "contract_address":"%s",
@@ -75,8 +76,8 @@ const MessageSendTypedData = `{
     }
 }`
 
-func SignMessageSend(chainId int64, messageContract string, fromChainId int64, fromId int64, fromSender string, toChainId int64, contractAddress string, data string, key *ecdsa.PrivateKey) (string, error) {
-	_data := fmt.Sprintf(MessageSendTypedData, chainId, messageContract, fromChainId, fromId, fromSender, toChainId, contractAddress, data)
+func SignMessageSend(chainId int64, messageContract string, fromChainId int64, fromId *big.Int, fromSender string, toChainId int64, contractAddress string, data string, key *ecdsa.PrivateKey) (string, error) {
+	_data := fmt.Sprintf(MessageSendTypedData, chainId, messageContract, fromChainId, fromId.Text(10), fromSender, toChainId, contractAddress, data)
 	var typedData apitypes.TypedData
 	if err := json.Unmarshal([]byte(_data), &typedData); err != nil {
 		return "", errors.WithStack(err)

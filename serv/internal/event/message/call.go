@@ -6,6 +6,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/shopspring/decimal"
 )
 
 var (
@@ -14,12 +15,12 @@ var (
 )
 
 type MessageCall struct {
-	FromChainId     int64  `json:"from_chain_id"`
-	FromId          int64  `json:"from_id"`
-	FromSender      string `json:"from_sender"`
-	ToChainId       int64  `json:"to_chain_id"`
-	ContractAddress string `json:"contract_address"`
-	Bytes           string `json:"bytes"`
+	FromChainId     int64           `json:"from_chain_id"`
+	FromId          decimal.Decimal `json:"from_id"`
+	FromSender      string          `json:"from_sender"`
+	ToChainId       int64           `json:"to_chain_id"`
+	ContractAddress string          `json:"contract_address"`
+	Bytes           string          `json:"bytes"`
 }
 
 func (*MessageCall) Name() string {
@@ -41,7 +42,7 @@ func (t *MessageCall) ToObj(data string) error {
 func (*MessageCall) Data(log types.Log) (string, error) {
 	transfer := &MessageCall{
 		FromChainId:     event.DataToInt64(log, 0),
-		FromId:          event.DataToInt64(log, 1),
+		FromId:          event.DataToDecimal(log, 1, 0),
 		FromSender:      event.DataToAddress(log, 2).Hex(),
 		ToChainId:       event.DataToInt64(log, 3),
 		ContractAddress: event.DataToAddress(log, 4).Hex(),

@@ -32,16 +32,29 @@ type Redis struct {
 }
 
 type Blockchain struct {
-	ChainId         int64
-	Rollback        bool
-	RpcUrl          string
-	InitBlockNumber int64
-	InitBlockHash   string
-	MessageAddress  string
-	Events          string
-	Senders         string
-	Validators      string
-	BlockInterval   int64
+	ChainId           int64
+	Rollback          bool
+	RpcUrl            string
+	InitBlockNumber   int64
+	InitBlockHash     string
+	MessageAddress    string
+	Events            string
+	Senders           string
+	Validators        string
+	BlockInterval     int64
+	ToChainId         int64
+	ToContractAddress string
+	ListenBtcAddress  string
+	BtcUser           string
+	BtcPass           string
+}
+
+type Particle struct {
+	AAPubKeyAPI string
+	Url         string
+	ChainId     int
+	ProjectUuid string
+	ProjectKey  string
 }
 
 type SentryConfig struct {
@@ -55,6 +68,7 @@ type AppConfig struct {
 	Server     Server
 	Database   Database
 	Redis      Redis
+	Particle   Particle
 	Blockchain []Blockchain
 	Sentry     SentryConfig
 }

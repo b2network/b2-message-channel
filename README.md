@@ -46,6 +46,7 @@ BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
 4. Example call
 
 ```
+//
 messageAddress = "0xc7441Ac47596D1356fcc70062dA0462FcA98E14e";
 businessAddress = "0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534";
 to_chain_id = 421614;

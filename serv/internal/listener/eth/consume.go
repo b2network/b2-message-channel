@@ -1,10 +1,11 @@
-package listener
+package eth
 
 import (
 	"bsquared.network/b2-message-channel-serv/internal/enums"
 	"bsquared.network/b2-message-channel-serv/internal/event/message"
 	"bsquared.network/b2-message-channel-serv/internal/models"
 	"fmt"
+	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"gorm.io/gorm"
@@ -33,7 +34,7 @@ func (l *Listener) consume() {
 		var Type enums.MessageType
 		var FromChainId int64
 		var FromSender string
-		var FromId int64
+		var FromId string
 		var ToChainId int64
 		var ToContractAddress string
 		var ToBytes string
@@ -56,7 +57,7 @@ func (l *Listener) consume() {
 				}
 				FromChainId = messageCall.FromChainId
 				FromSender = messageCall.FromSender
-				FromId = messageCall.FromId
+				FromId = common.BytesToHash(messageCall.FromId.BigInt().Bytes()).Hex()
 				ToChainId = messageCall.ToChainId
 				ToContractAddress = messageCall.ContractAddress
 				ToBytes = messageCall.Bytes
@@ -71,7 +72,7 @@ func (l *Listener) consume() {
 				}
 				FromChainId = messageSend.FromChainId
 				FromSender = messageSend.FromSender
-				FromId = messageSend.FromId
+				FromId = common.BytesToHash(messageSend.FromId.BigInt().Bytes()).Hex()
 				ToChainId = messageSend.ToChainId
 				ToContractAddress = messageSend.ContractAddress
 				ToBytes = messageSend.Bytes

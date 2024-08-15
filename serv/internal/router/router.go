@@ -3,12 +3,8 @@ package router
 import (
 	"bsquared.network/b2-message-channel-serv/internal/boot"
 	"bsquared.network/b2-message-channel-serv/internal/config"
-	"bsquared.network/b2-message-channel-serv/internal/middlewares"
-	"github.com/getsentry/sentry-go"
-	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	log "github.com/sirupsen/logrus"
 	"time"
 )
 
@@ -25,27 +21,27 @@ func InitRoutes(initVal *boot.Initialization, cfg config.AppConfig) *gin.Engine 
 		},
 		MaxAge: 12 * time.Hour,
 	}))
-	r.Use(sentrygin.New(sentrygin.Options{
-		Repanic: true,
-	}))
-
-	r.Use(sentrygin.New(sentrygin.Options{
-		Repanic: true,
-	}))
-	r.Use(gin.CustomRecovery(middlewares.ErrorHandler))
-	if err := sentry.Init(sentry.ClientOptions{
-		Dsn:           cfg.Sentry.Url,
-		EnableTracing: true,
-		// Set TracesSampleRate to 1.0 to capture 100%
-		// of transactions for performance monitoring.
-		// We recommend adjusting this value in production,
-		TracesSampleRate: cfg.Sentry.SampleRate,
-		Debug:            cfg.Sentry.Env != "prod",
-		Environment:      cfg.Sentry.Env,
-		Release:          cfg.Sentry.Release,
-	}); err != nil {
-		log.Error("Sentry initialization failed: %v", err)
-	}
+	//r.Use(sentrygin.New(sentrygin.Options{
+	//	Repanic: true,
+	//}))
+	//
+	//r.Use(sentrygin.New(sentrygin.Options{
+	//	Repanic: true,
+	//}))
+	//r.Use(gin.CustomRecovery(middlewares.ErrorHandler))
+	//if err := sentry.Init(sentry.ClientOptions{
+	//	Dsn:           cfg.Sentry.Url,
+	//	EnableTracing: true,
+	//	// Set TracesSampleRate to 1.0 to capture 100%
+	//	// of transactions for performance monitoring.
+	//	// We recommend adjusting this value in production,
+	//	TracesSampleRate: cfg.Sentry.SampleRate,
+	//	Debug:            cfg.Sentry.Env != "prod",
+	//	Environment:      cfg.Sentry.Env,
+	//	Release:          cfg.Sentry.Release,
+	//}); err != nil {
+	//	log.Error("Sentry initialization failed: %v", err)
+	//}
 	//r.Use(middlewares.JwtMiddleWare(cfg.Api.Secret))
 	//r.Use(middlewares.FixTokenMiddleWare(cfg.Api.Secret))
 	//BybitApi := r.Group("/api/bybit")

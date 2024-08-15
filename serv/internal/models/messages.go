@@ -9,7 +9,7 @@ type Message struct {
 	FromChainId         int64               `json:"from_chain_id"`
 	FromSender          string              `json:"from_sender"`
 	FromContractAddress string              `json:"from_contract_address"`
-	FromId              int64               `json:"from_id"`
+	FromId              string              `json:"from_id"`
 	ToChainId           int64               `json:"to_chain_id"`
 	ToContractAddress   string              `json:"to_contract_address"`
 	ToBytes             string              `json:"to_bytes"`

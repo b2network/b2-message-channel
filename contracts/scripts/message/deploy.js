@@ -11,18 +11,18 @@ async function main() {
     const [owner] = await ethers.getSigners()
     console.log("Owner Address:", owner.address);
 
-    const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");
-    const instance = await upgrades.deployProxy(B2MessageBridge);
-    await instance.waitForDeployment();
-    console.log("B2MessageBridge Address:", instance.target);
+    // const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");
+    // const instance = await upgrades.deployProxy(B2MessageBridge);
+    // await instance.waitForDeployment();
+    // console.log("B2MessageBridge Address:", instance.target);
 
 
     // Upgrading
-    // const simpleBridgeV4 = await ethers.getContractFactory("B2MessageBridge");
-    // const upgraded = await upgrades.upgradeProxy("0xf97c3d6F65D5C5005c5c7bF23945b0acD7A8a722", simpleBridgeV4, {
-    //     gasPrice: ethers.parseUnits('352', 'wei')
-    // });
-    // console.log("SimpleBridge upgraded:", upgraded.target);
+    const simpleBridgeV4 = await ethers.getContractFactory("B2MessageBridge");
+    const upgraded = await upgrades.upgradeProxy("0xc7441Ac47596D1356fcc70062dA0462FcA98E14e", simpleBridgeV4, {
+        gasPrice: ethers.parseUnits('352', 'wei')
+    });
+    console.log("SimpleBridge upgraded:", upgraded.target);
 
 }
 

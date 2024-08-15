@@ -1,4 +1,4 @@
-package listener
+package eth
 
 import (
 	"bsquared.network/b2-message-channel-serv/internal/event/message"
