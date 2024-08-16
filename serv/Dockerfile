@@ -1,5 +1,5 @@
 FROM golang:latest as builder
-ARG GOPROXY=https://goproxy.cn
+#ARG GOPROXY=https://goproxy.cn
 COPY . /src
 RUN apt-get update && \
     cd /src/serv && \
