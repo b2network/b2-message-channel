@@ -20,5 +20,5 @@ FROM alpine:latest
 WORKDIR "/src"
 COPY --from=builder /src/build/app /usr/bin/app
 #COPY --from=builder /src/build/listener /usr/bin/listener
-COPY --from=builder /src/serv/config/config.yaml /src/config/config.yaml
+COPY --from=builder /src/listener/config/config.yaml /src/config/config.yaml
 CMD ["/usr/bin/app"]
