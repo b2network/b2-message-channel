@@ -58,7 +58,7 @@ contract B2MessageBridge is IB2MessageBridge, Initializable, UUPSUpgradeable, EI
         require(!ids[from_chain_id][from_id], "non-repeatable processing");
         uint256 weight_ = 0;
         for(uint256 i = 0; i < signatures.length; i++) {
-           bool success = verify(from_id, from_chain_id, from_sender, block.chainid, contract_address, data, signatures[i]);
+           bool success = verify(from_chain_id, from_id, from_sender, block.chainid, contract_address, data, signatures[i]);
            if (success) {
                 weight_ = weight_ + 1;
            }
@@ -84,7 +84,7 @@ contract B2MessageBridge is IB2MessageBridge, Initializable, UUPSUpgradeable, EI
     }
 
     function SendHash(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address contract_address, bytes calldata data) public view returns (bytes32) {
-        return _hashTypedDataV4(keccak256(abi.encode(SEND_HASH_TYPE,from_chain_id, from_id, from_sender, to_chain_id, contract_address, data)));
+        return _hashTypedDataV4(keccak256(abi.encode(SEND_HASH_TYPE,from_chain_id, from_id, from_sender, to_chain_id, contract_address, keccak256(data))));
     }
 
 }

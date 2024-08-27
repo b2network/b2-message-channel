@@ -15,7 +15,7 @@ jobs:
         with:
           image_name: ${{ github.repository }}  # it will be lowercased internally
           github_token: ${{ secrets.PERSONAL_TOKEN }}
-          dockerfile: ./serv/Dockerfile
+          dockerfile: ./listener/Dockerfile
       - name: clone repo
         run: git clone https://${{secrets.PERSONAL_USERNAME}}:${{secrets.PERSONAL_TOKEN}}@github.com/b2network/devops.git 
       - name: modify 

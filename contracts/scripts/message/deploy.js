@@ -6,8 +6,6 @@ async function main() {
      * as: yarn hardhat run scripts/message/deploy.js --network as
      * b2: yarn hardhat run scripts/message/deploy.js --network b2
      */
-    // 2445771839062500
-    //  991038400000000
     const [owner] = await ethers.getSigners()
     console.log("Owner Address:", owner.address);
 
@@ -19,9 +17,7 @@ async function main() {
 
     // Upgrading
     const simpleBridgeV4 = await ethers.getContractFactory("B2MessageBridge");
-    const upgraded = await upgrades.upgradeProxy("0xc7441Ac47596D1356fcc70062dA0462FcA98E14e", simpleBridgeV4, {
-        gasPrice: ethers.parseUnits('352', 'wei')
-    });
+    const upgraded = await upgrades.upgradeProxy("0x5c2646996eEe3ECf865BEfA2De24e5BbE1C552Ba", simpleBridgeV4);
     console.log("SimpleBridge upgraded:", upgraded.target);
 
 }

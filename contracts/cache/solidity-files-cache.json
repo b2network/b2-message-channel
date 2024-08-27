@@ -732,8 +732,8 @@
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-channel/contracts/contracts/message/B2MessageBridge.sol": {
-      "lastModificationDate": 1723514792670,
-      "contentHash": "b952757f06c05e4d7e0871f9991cfd63",
+      "lastModificationDate": 1724732070009,
+      "contentHash": "24a68336c647f62be054d722872d6f87",
       "sourceName": "contracts/message/B2MessageBridge.sol",
       "solcConfig": {
         "version": "0.8.20",

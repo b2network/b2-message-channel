@@ -3,7 +3,7 @@ require('@openzeppelin/hardhat-upgrades');
 
 // B2_TEST_DEV
 const B2_DEV = {
-    RPC_URL: "https://testnet-rpc.bsquared.network",
+    RPC_URL: "https://b2-testnet.alt.technology",
     PRIVATE_KEY_LIST: [],
 }
 

@@ -32,7 +32,7 @@ function call(uint256 to_chain_id, address contract_address, bytes calldata data
 bsquared testnet
 
 ```
-B2MessageBridge: 0xc7441Ac47596D1356fcc70062dA0462FcA98E14e
+B2MessageBridge: 0x5c2646996eEe3ECf865BEfA2De24e5BbE1C552Ba
 BusinessContract: 0x91171cf194a4B66Bd459Ada038397c7e890FB9D4
 ```
 
@@ -47,7 +47,7 @@ BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
 
 ```
 //
-messageAddress = "0xc7441Ac47596D1356fcc70062dA0462FcA98E14e";
+messageAddress = "0x5c2646996eEe3ECf865BEfA2De24e5BbE1C552Ba";
 businessAddress = "0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534";
 to_chain_id = 421614;
 data = '0x1234';
