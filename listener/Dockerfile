@@ -2,7 +2,7 @@ FROM golang:latest as builder
 #ARG GOPROXY=https://goproxy.cn
 COPY . /src
 RUN apt-get update && \
-    cd /src/serv && \
+    cd /src/listener && \
     GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /src/build/app cmd/app/main.go
 #    &&  GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64  go build -o /src/build/listener cmd/listener/main.go
 # RUN apt-get update && apt install -y protobuf-compiler git && \
