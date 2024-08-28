@@ -200,7 +200,7 @@ func (l *BitcoinListener) handleTask(task models.SyncTask) error {
 			//l.logger.Infof("bitcoin indexer parsed currentBlock, i)
 			//bis.log.Infow("bitcoin indexer parsed", "currentBlock", i,
 			//	"currentTxIndex", currentTxIndex, "latestBlock", latestBlock)
-			time.Sleep(time.Millisecond * time.Duration(l.config.BlockInterval))
+			//time.Sleep(time.Millisecond * time.Duration(l.config.BlockInterval))
 		}
 	}
 	return nil
