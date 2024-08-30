@@ -53,6 +53,7 @@ type Blockchain struct {
 	ToContractAddress string
 	BtcUser           string
 	BtcPass           string
+	DisableTLS        bool
 }
 
 type Particle struct {
