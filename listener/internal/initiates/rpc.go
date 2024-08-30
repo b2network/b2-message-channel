@@ -20,8 +20,8 @@ func InitBitcoinRpc(config config.Blockchain) *rpcclient.Client {
 		Host:         config.RpcUrl,
 		User:         config.BtcUser,
 		Pass:         config.BtcPass,
-		HTTPPostMode: true,  // Bitcoin core only supports HTTP POST mode
-		DisableTLS:   false, // Bitcoin core does not provide TLS by default
+		HTTPPostMode: true,              // Bitcoin core only supports HTTP POST mode
+		DisableTLS:   config.DisableTLS, // Bitcoin core does not provide TLS by default
 	}, nil)
 	if err != nil {
 		log.Panicf("client dial error: %s\n", err)

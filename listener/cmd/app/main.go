@@ -15,6 +15,7 @@ func main() {
 	cfg := config.LoadConfig()
 
 	db := initiates.InitDB(cfg.Database)
+	bitcoinRpc := initiates.InitBitcoinRpc(cfg.Bitcoin)
 	bsquaredRpc := initiates.InitEthereumRpc(cfg.Bsquared)
 	arbitrumRpc := initiates.InitEthereumRpc(cfg.Arbitrum)
 
@@ -24,25 +25,22 @@ func main() {
 
 	arbitrumBuilder := builder.NewBuilder(cfg.Builder.Arbitrum, cfg.Log, cfg.Arbitrum, db, arbitrumRpc)
 	arbitrumBuilder.Start()
+
 	// listener
 	//bsquaredRpc := initiates.InitEthereumRpc(cfg.Bsquared)
 	bsquaredListener := ethereum.NewListener(cfg.Log, cfg.Bsquared, bsquaredRpc, db)
 	bsquaredListener.Start()
 
-	//arbitrumRpc := initiates.InitEthereumRpc(cfg.Arbitrum)
 	arbitrumListener := ethereum.NewListener(cfg.Log, cfg.Arbitrum, arbitrumRpc, db)
 	arbitrumListener.Start()
 
-	bitcoinRpc := initiates.InitBitcoinRpc(cfg.Bitcoin)
 	bitcoinListener := bitcoin.NewListener(cfg.Log, cfg.Bitcoin, cfg.Particle, bitcoinRpc, db)
 	bitcoinListener.Start()
-	// validator
 
-	//bsquaredRpc := initiates.InitEthereumRpc(cfg.Bsquared)
+	// validator
 	bsquaredValidator := validator.NewValidator(cfg.Validator.Bsquared, cfg.Log, cfg.Bsquared, db, bsquaredRpc)
 	bsquaredValidator.Start()
 
-	//arbitrumRpc := initiates.InitEthereumRpc(cfg.Arbitrum)
 	arbitrumValidator := validator.NewValidator(cfg.Validator.Arbitrum, cfg.Log, cfg.Arbitrum, db, arbitrumRpc)
 	arbitrumValidator.Start()
 	select {}

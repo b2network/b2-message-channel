@@ -37,6 +37,7 @@ bitcoin:
   ToContractAddress: 0xAaF7f27EA526B29cF4dA3b957Ed0C388070FcCE5
   BtcUser: test
   BtcPass: test
+  DisableTLS: false
 
 bsquared:
   name: bsquared
