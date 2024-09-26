@@ -731,51 +731,6 @@
         "IBeacon"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-channel/contracts/contracts/message/B2MessageBridge.sol": {
-      "lastModificationDate": 1724732070009,
-      "contentHash": "24a68336c647f62be054d722872d6f87",
-      "sourceName": "contracts/message/B2MessageBridge.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
-        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "B2MessageBridge",
-        "IB2MessageBridge",
-        "IBusinessContract"
-      ]
-    },
     "/Users/m/Workspaces/b2-network/b2-message-channel/contracts/contracts/business/BusinessContractExample.sol": {
       "lastModificationDate": 1721898040459,
       "contentHash": "a06f9fca36c78543e58f14b62f94a097",
@@ -816,6 +771,51 @@
       ],
       "artifacts": [
         "BusinessContractExample",
+        "IBusinessContract"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-channel/contracts/contracts/message/MessageBridge.sol": {
+      "lastModificationDate": 1727274581576,
+      "contentHash": "8f09af7097efb94482726be1b31b3826",
+      "sourceName": "contracts/message/MessageBridge.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "B2MessageBridge",
+        "IB2MessageBridge",
         "IBusinessContract"
       ]
     }

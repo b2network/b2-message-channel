@@ -1,25 +1,25 @@
 require("@nomicfoundation/hardhat-toolbox");
 require('@openzeppelin/hardhat-upgrades');
+require('dotenv').config();
 
-// B2_TEST_DEV
-const B2_DEV = {
-    RPC_URL: "https://b2-testnet.alt.technology",
-    PRIVATE_KEY_LIST: [],
-}
-
-const AS_DEV = {
-    RPC_URL: "https://arbitrum-sepolia.blockpi.network/v1/rpc/public",
-    PRIVATE_KEY_LIST: [],
+const AS = {
+    RPC_URL: process.env.AS_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_PRIVATE_KEY_0 || ""],
 }
 
 const B2 = {
-    RPC_URL: "https://rpc.bsquared.network",
-    PRIVATE_KEY_LIST: []
+    RPC_URL: process.env.B2_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_PRIVATE_KEY_0 || ""],
+}
+
+const B2_DEV = {
+    RPC_URL: process.env.B2_DEV_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_DEV_PRIVATE_KEY_0 || ""],
+}
+
+const AS_DEV = {
+    RPC_URL: process.env.AS_DEV_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_DEV_PRIVATE_KEY_0 || ""],
 }
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners()
-
     for (const account of accounts) {
         console.log(account.address)
     }
@@ -27,13 +27,15 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 module.exports = {
     networks: {
-        hardhat: {}, as: {
+        asdev: {
             blockConfirmations: 1, url: AS_DEV.RPC_URL, accounts: AS_DEV.PRIVATE_KEY_LIST,
         }, b2dev: {
-            blockConfirmations: 1, url: B2_DEV.RPC_URL, accounts: B2_DEV.PRIVATE_KEY_LIST,
+            blockConfirmations: 1, url: B2_DEV.RPC_URL, accounts: B2_DEV.PRIVATE_KEY_LIST, gasPrice: 352
+        }, as: {
+            blockConfirmations: 1, url: AS.RPC_URL, accounts: AS.PRIVATE_KEY_LIST,
         }, b2: {
             blockConfirmations: 1, url: B2.RPC_URL, accounts: B2.PRIVATE_KEY_LIST, gasPrice: 352,
-        }
+        }, hardhat: {},
     }, solidity: {
         version: "0.8.20", settings: {
             optimizer: {
