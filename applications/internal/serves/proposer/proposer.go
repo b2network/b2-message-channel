@@ -267,7 +267,7 @@ func (p *Proposer) send(message models.Message) error {
 		} else {
 			chainParams = &chaincfg.TestNet3Params
 		}
-		verify, err := tx.VerifyBtcTx(p.client.BtcRpc, chainParams, p.particle, p.conf.ListenAddress, message.TxHash, message.FromId, message.ToBytes)
+		verify, err := tx.VerifyBtcTx(p.client.BtcRpc, chainParams, p.particle, message.FromMessageBridge, message.TxHash, message.FromId, message.ToBytes)
 		if err != nil {
 			p.logger.Errorf("verify btc tx err: %s", err)
 			return err

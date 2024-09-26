@@ -54,7 +54,7 @@ func VerifyEthTx(rpc *ethclient.Client, txHash string, logIndex int64, fromMessa
 }
 
 func VerifyBtcTx(rpc *rpcclient.Client, chainParams *chaincfg.Params, particle config.Particle, listenAddress string, txHash string, fromId string, data string) (bool, error) {
-	_txHash, err := chainhash.NewHashFromStr(txHash)
+	_txHash, err := chainhash.NewHashFromStr(txHash[2:])
 	if err != nil {
 		return false, err
 	}
@@ -63,32 +63,34 @@ func VerifyBtcTx(rpc *rpcclient.Client, chainParams *chaincfg.Params, particle c
 		return false, err
 	}
 	txResult := tx.MsgTx()
-
 	_listenAddress, err := btcutil.DecodeAddress(listenAddress, chainParams)
 	if err != nil {
 		return false, err
 	}
-
 	var totalValue int64
 	var depositAddress string
 	for _, v := range txResult.TxOut {
 		pkAddress, err := parseAddress(chainParams, v.PkScript)
-		if err != nil && errors.Is(err, ErrParsePkScript) {
-			continue
-		} else if err != nil && errors.Is(err, ErrParsePkScriptNullData) {
-			nullData, err := parseNullData(v.PkScript)
-			if err != nil {
+		if err != nil {
+			if errors.Is(err, ErrParsePkScript) {
 				continue
 			}
-			evmAddress, err := parseEvmAddress(nullData)
-			if err != nil {
-				continue
+			if errors.Is(err, ErrParsePkScriptNullData) {
+				nullData, err := parseNullData(v.PkScript)
+				if err != nil {
+					continue
+				}
+				evmAddress, err := parseEvmAddress(nullData)
+				if err != nil {
+					continue
+				}
+				fmt.Println("evmAddress:", evmAddress)
+				if depositAddress == "" {
+					depositAddress = evmAddress
+				}
+			} else {
+				return false, err
 			}
-			if depositAddress != "" {
-				depositAddress = evmAddress
-			}
-		} else if err != nil {
-			return false, err
 		}
 		if pkAddress == _listenAddress.EncodeAddress() {
 			totalValue += v.Value
@@ -101,20 +103,17 @@ func VerifyBtcTx(rpc *rpcclient.Client, chainParams *chaincfg.Params, particle c
 	if len(fromAddress) == 0 {
 		return false, errors.New("fromAddress invalid")
 	}
-	if depositAddress != "" {
+	if depositAddress == "" {
 		_depositAddress, err := getAADepositAddress(particle, fromAddress[0].Address)
 		if err != nil {
 			return false, err
 		}
 		depositAddress = _depositAddress
 	}
-
 	_data := message.EncodeSendData(txResult.TxHash().String(), fromAddress[0].Address, depositAddress, decimal.New(totalValue, 0))
-
-	if common.HexToHash(fromId) == common.HexToHash(txHash) && data == hex.EncodeToString(_data) {
+	if common.HexToHash(fromId) == common.HexToHash(txHash) && data == "0x"+hex.EncodeToString(_data) {
 		return true, nil
 	}
-
 	return false, nil
 }
 

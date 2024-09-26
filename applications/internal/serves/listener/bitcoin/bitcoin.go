@@ -619,7 +619,7 @@ func (l *BitcoinListener) handleMessage(deposit models.Deposit) error {
 	} else if err != nil && err.Error() == "AAGetBTCAccount not found" {
 		err = l.db.Model(models.Deposit{}).
 			Where("id=?", deposit.Id).
-			Update("status", enums.MessageStatusInvalid).Error
+			Update("status", enums.DepositStatusInvalid).Error
 		return nil
 	}
 
@@ -631,7 +631,7 @@ func (l *BitcoinListener) handleMessage(deposit models.Deposit) error {
 	} else {
 		err = l.db.Model(models.Deposit{}).
 			Where("id=?", deposit.Id).
-			Update("status", enums.MessageStatusInvalid).Error
+			Update("status", enums.DepositStatusInvalid).Error
 		return nil
 	}
 	msg := models.Message{
@@ -665,12 +665,12 @@ func (l *BitcoinListener) handleMessage(deposit models.Deposit) error {
 		if deposit.BtcFromEvmAddress != "" {
 			err = tx.Model(models.Deposit{}).
 				Where("id=?", deposit.Id).
-				Update("status", enums.MessageStatusValid).Error
+				Update("status", enums.DepositStatusValid).Error
 		} else {
 			err = tx.Model(models.Deposit{}).
 				Where("id=?", deposit.Id).
 				Update("btc_from_aa_address", depositAddress).
-				Update("status", enums.MessageStatusValid).Error
+				Update("status", enums.DepositStatusValid).Error
 		}
 		if err != nil {
 			l.logger.Errorf("update deposit failed: %s", err.Error())
