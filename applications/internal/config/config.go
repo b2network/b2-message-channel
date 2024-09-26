@@ -2,6 +2,7 @@ package config
 
 import (
 	"bsquared.network/b2-message-channel-applications/internal/enums"
+	"fmt"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 	"strconv"
@@ -62,11 +63,13 @@ type Particle struct {
 	ProjectKey  string
 }
 
-func LoadConfig(fileName string) AppConfig {
+func LoadConfig(input string) AppConfig {
+	path, filename, suffix := parsePath(input)
+	fmt.Printf("path: %s\n filename: %s\n suffix: %s\n", path, filename, suffix)
 	v := viper.New()
-	v.SetConfigName(fileName)
-	v.AddConfigPath("./config")
-	v.SetConfigType("yaml")
+	v.SetConfigName(filename)
+	v.AddConfigPath(path)
+	v.SetConfigType(suffix)
 	v.AutomaticEnv()
 	replacer := strings.NewReplacer(".", "_")
 	v.SetEnvKeyReplacer(replacer)
@@ -102,4 +105,22 @@ func ParseBridges(input string) (map[int64]string, error) {
 		bridges[key] = value
 	}
 	return bridges, nil
+}
+
+func parsePath(input string) (string, string, string) {
+	var path, filename, suffix = ".", "config", "yaml"
+	suffix_index := strings.LastIndex(input, ".")
+	path_index := strings.LastIndex(input, "/")
+	if path_index < suffix_index && suffix_index > -1 {
+		suffix = input[suffix_index+1:]
+	}
+	if path_index > -1 {
+		path = input[:path_index]
+	}
+	if path_index > -1 && suffix_index > -1 && path_index < suffix_index {
+		filename = input[path_index+1 : suffix_index]
+	} else if path_index > -1 {
+		filename = input[path_index+1:]
+	}
+	return path, filename, suffix
 }
