@@ -222,6 +222,7 @@ database:
   loglevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
 bitcoin:
+  status: false
   name: bitcoin
   chaintype: 2
   chainid: 0
@@ -237,6 +238,7 @@ bitcoin:
   DisableTLS: false
 
 bsquared:
+  status: false
   name: bsquared
   chaintype: 1
   mainnet: false
@@ -248,6 +250,7 @@ bsquared:
   Builders: [ "0x0000000000000000000000000000000000000000000000000000000000000000" ]
 
 arbitrum:
+  status: false
   name: arbitrum
   chaintype: 1
   chainid: 421614
@@ -297,6 +300,7 @@ APP_DATABASE_DBNAME=b2_message
 APP_DATABASE_LOGLEVEL=4
 
 APP_BITCOIN_NAME=bitcoin
+APP_BITCOIN_STATUS=true
 APP_BITCOIN_CHAINTYPE=2
 APP_BITCOIN_CHAINID=0
 APP_BITCOIN_MAINNET=false
@@ -311,6 +315,7 @@ APP_BITCOIN_BTCPASS=test
 APP_BITCOIN_DISABLETLS=false
 
 APP_BSQUARED_NAME=bsquared
+APP_BSQUARED_STATUS=true
 APP_BSQUARED_CHAINTYPE=1
 APP_BSQUARED_MAINNET=false
 APP_BSQUARED_CHAINID=1123
@@ -321,6 +326,7 @@ APP_BSQUARED_BLOCKINTERVAL=2000
 APP_BSQUARED_BUILDERS=0x0000000000000000000000000000000000000000000000000000000000000000
 
 APP_ARBITRUM_NAME=arbitrum
+APP_ARBITRUM_STATUS=true
 APP_ARBITRUM_CHAINTYPE=1
 APP_ARBITRUM_CHAINID=421614
 APP_ARBITRUM_MAINNET=false
@@ -350,6 +356,7 @@ database:
   loglevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
 bsquared:
+  status: false
   name: bsquared
   chaintype: 1
   mainnet: false
@@ -364,6 +371,7 @@ bsquared:
   Validators: [ "0x0000000000000000000000000000000000000000" ]
 
 arbitrum:
+  status: false
   name: arbitrum
   chaintype: 1
   chainid: 421614
@@ -378,6 +386,7 @@ arbitrum:
   Validators: [ "0x0000000000000000000000000000000000000000" ]
 
 bitcoin:
+  status: false
   name: bitcoin
   chaintype: 2
   chainid: 0
@@ -436,6 +445,7 @@ APP_DATABASE_DBNAME=b2_message
 APP_DATABASE_LOGLEVEL=4
 
 APP_BSQUARED_NAME=bsquared
+APP_BSQUARED_STATUS=true
 APP_BSQUARED_CHAINTYPE=1
 APP_BSQUARED_MAINNET=false
 APP_BSQUARED_CHAINID=1123
@@ -449,6 +459,7 @@ APP_BSQUARED_SIGNATUREWEIGHT=1
 APP_BSQUARED_VALIDATORS=0x0000000000000000000000000000000000000000
 
 APP_ARBITRUM_NAME=arbitrum
+APP_ARBITRUM_STATUS=true
 APP_ARBITRUM_CHAINTYPE=1
 APP_ARBITRUM_CHAINID=421614
 APP_ARBITRUM_MAINNET=false
@@ -462,6 +473,7 @@ APP_ARBITRUM_SIGNATUREWEIGHT=1
 APP_ARBITRUM_VALIDATORS=0x0000000000000000000000000000000000000000
 
 APP_BITCOIN_NAME=bitcoin
+APP_BITCOIN_STATUS=true
 APP_BITCOIN_CHAINTYPE=2
 APP_BITCOIN_CHAINID=0
 APP_BITCOIN_MAINNET=false
@@ -497,6 +509,7 @@ log:
   level: 6
 
 bsquared:
+  status: false
   name: bsquared
   chaintype: 1
   mainnet: false
@@ -510,6 +523,7 @@ bsquared:
   SignatureWeight: 1
 
 arbitrum:
+  status: false
   name: arbitrum
   chaintype: 1
   chainid: 421614
@@ -523,6 +537,7 @@ arbitrum:
   SignatureWeight: 1
 
 bitcoin:
+  status: false
   name: bitcoin
   chaintype: 2
   chainid: 0
@@ -574,6 +589,7 @@ APP_LOG_LEVEL=6 ./validator -f=validator
 APP_LOG_LEVEL=6
 
 APP_BSQUARED_NAME=bsquared
+APP_BSQUARED_STATUS=true
 APP_BSQUARED_CHAINTYPE=1
 APP_BSQUARED_MAINNET=false
 APP_BSQUARED_CHAINID=1123
@@ -586,6 +602,7 @@ APP_BSQUARED_ENDPOINT=/ip4/127.0.0.1/tcp/20000/p2p/16Uiu2HAkwynt59WSsNRS9sk1aszg
 APP_BSQUARED_SIGNATUREWEIGHT=1
 
 APP_ARBITRUM_NAME=arbitrum
+APP_ARBITRUM_STATUS=true
 APP_ARBITRUM_CHAINTYPE=1
 APP_ARBITRUM_CHAINID=421614
 APP_ARBITRUM_MAINNET=false
@@ -598,6 +615,7 @@ APP_ARBITRUM_ENDPOINT=/ip4/127.0.0.1/tcp/20001/p2p/16Uiu2HAkwynt59WSsNRS9sk1aszg
 APP_ARBITRUM_SIGNATUREWEIGHT=1
 
 APP_BITCOIN_NAME=bitcoin
+APP_BITCOIN_STATUS=true
 APP_BITCOIN_CHAINTYPE=2
 APP_BITCOIN_CHAINID=0
 APP_BITCOIN_MAINNET=false
@@ -647,6 +665,7 @@ database:
   loglevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
 bitcoin:
+  status: true
   name: bitcoin
   chaintype: 2
   chainid: 0
@@ -662,6 +681,7 @@ bitcoin:
   DisableTLS: false
 
 bsquared:
+  status: true
   name: bsquared
   chaintype: 1
   mainnet: false
@@ -673,6 +693,7 @@ bsquared:
   Builders: [ "0x0000000000000000000000000000000000000000000000000000000000000000" ]
 
 arbitrum:
+  status: true
   name: arbitrum
   chaintype: 1
   chainid: 421614
@@ -721,6 +742,7 @@ APP_DATABASE_DBNAME=b2_message
 APP_DATABASE_LOGLEVEL=4
 
 APP_BITCOIN_NAME=bitcoin
+APP_BITCOIN_STATUS=true
 APP_BITCOIN_CHAINTYPE=2
 APP_BITCOIN_CHAINID=0
 APP_BITCOIN_MAINNET=false
@@ -735,6 +757,7 @@ APP_BITCOIN_BTCPASS=test
 APP_BITCOIN_DISABLETLS=false
 
 APP_BSQUARED_NAME=bsquared
+APP_BSQUARED_STATUS=true
 APP_BSQUARED_CHAINTYPE=1
 APP_BSQUARED_MAINNET=false
 APP_BSQUARED_CHAINID=1123
@@ -745,6 +768,7 @@ APP_BSQUARED_BLOCKINTERVAL=2000
 APP_BSQUARED_BUILDERS=0x0000000000000000000000000000000000000000000000000000000000000000
 
 APP_ARBITRUM_NAME=arbitrum
+APP_ARBITRUM_STATUS=true
 APP_ARBITRUM_CHAINTYPE=1
 APP_ARBITRUM_CHAINID=421614
 APP_ARBITRUM_MAINNET=false

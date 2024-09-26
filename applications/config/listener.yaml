@@ -9,15 +9,17 @@ database:
   dbname: b2_message
   loglevel: 4  # 1: Silent 2: Error 3: Warn 4: Info
 
+bridges: 1123:0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5,421614:0x2A82058E46151E337Baba56620133FC39BD5B71F
+
 bsquared:
   status: false
   name: bsquared
   chaintype: 1
   mainnet: false
   chainid: 1123
-  rpcurl: https://b2-testnet.alt.technology
+  rpcurl: 127.0.0.1:8081
   safeblocknumber: 1
-  ListenAddress: 0x5c2646996eEe3ECf865BEfA2De24e5BbE1C552Ba
+  ListenAddress: 0x0000000000000000000000000000000000000000
   BlockInterval: 2000
 
 arbitrum:
@@ -26,9 +28,9 @@ arbitrum:
   chaintype: 1
   chainid: 421614
   mainnet: false
-  rpcurl: https://cosmological-green-spring.arbitrum-sepolia.quiknode.pro/e41990a3263b68eecb26a88d3b3122185798613e/
+  rpcurl: 127.0.0.1:8082
   safeblocknumber: 1
-  ListenAddress: 0x2A82058E46151E337Baba56620133FC39BD5B71F
+  ListenAddress: 0x0000000000000000000000000000000000000000
   BlockInterval: 100
 
 bitcoin:
@@ -37,20 +39,20 @@ bitcoin:
   chaintype: 2
   chainid: 0
   mainnet: false
-  rpcurl: 43.128.75.27:38332 #divine-patient-meadow.btc-testnet.quiknode.pro/36ade4989e57ddd507d9790dec479606cbe8c0c6
+  rpcurl: 127.0.0.1:8083
   safeblocknumber: 3
   ListenAddress: muGFcyjuyURJJsXaLXHCm43jLBmGPPU7ME
   BlockInterval: 6000
   ToChainId: 1123
-  ToContractAddress: 0xAaF7f27EA526B29cF4dA3b957Ed0C388070FcCE5
-  BtcUser: 121FhfhGrhxyq9rIGf
-  BtcPass: Z8slkhblO4xtqH8uK7
+  ToContractAddress: 0x0000000000000000000000000000000000000000
+  BtcUser: 000000000000000000
+  BtcPass: 000000000000000000
   DisableTLS: true
 
 particle:
   Url: https://rpc.particle.network/evm-chain
   ChainId: 1123
-  ProjectUuid: 34c6b829-5b89-44e8-90a9-6d982787b9c9
-  ProjectKey: c6Z44Ml4TQeNhctvwYgdSv6DBzfjf6t6CB0JDscR
+  ProjectUuid: 000000000000000000
+  ProjectKey: 000000000000000000
   AAPubKeyAPI: https://bridge-aa-dev.bsquared.network
 

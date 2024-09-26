@@ -108,3 +108,5 @@ contracts/cache/*
 node_modules
 *-dev.yaml
 .env
+applications/env
+.DS_Store
