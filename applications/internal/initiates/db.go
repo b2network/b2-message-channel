@@ -1,7 +1,7 @@
 package initiates
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

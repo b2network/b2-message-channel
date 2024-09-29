@@ -17,7 +17,8 @@ async function main() {
     let businessAddress;
     let to_chain_id;
     if (network.name == 'b2dev') {
-        messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        // messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        messageAddress = "0xDf5b12f094cf9b12eb2523cC43a62Dd6787D7AB8";
         businessAddress = "0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534";
         to_chain_id = 421614;
     } else if (network.name == 'asdev') {
@@ -33,11 +34,11 @@ async function main() {
     }
     console.log("Message Address: ", messageAddress);
     console.log("Business Address: ", businessAddress);
-
+    // MessageSharing.sol
     // TODO
     let data = '0x1234';
-    const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");
-    const instance = await B2MessageBridge.attach(messageAddress);
+    const B2MessageSharing = await ethers.getContractFactory("B2MessageSharing");
+    const instance = await B2MessageSharing.attach(messageAddress);
 
     let tx = await instance.call(to_chain_id, businessAddress, data);
     const txReceipt = await tx.wait(1);

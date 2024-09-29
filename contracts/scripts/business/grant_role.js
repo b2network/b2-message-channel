@@ -14,7 +14,8 @@ async function main() {
     let senderAddress;
     if (network.name == 'b2dev') {
         businessAddress = "0x804641e29f5F63a037022f0eE90A493541cCb869";
-        senderAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        // senderAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        senderAddress = "0x0527aE9B13cdb9ce3B4250303702Be7845A24451";
 
     } else if (network.name == 'asdev') {
         businessAddress = "0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534";

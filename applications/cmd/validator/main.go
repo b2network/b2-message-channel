@@ -1,11 +1,11 @@
 package main
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
-	"bsquared.network/b2-message-channel-applications/internal/initiates"
-	"bsquared.network/b2-message-channel-applications/internal/serves/validator"
-	"bsquared.network/b2-message-channel-applications/internal/utils/log"
-	"bsquared.network/b2-message-channel-applications/internal/vo"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/initiates"
+	"bsquared.network/b2-message-sharing-applications/internal/serves/validator"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
+	"bsquared.network/b2-message-sharing-applications/internal/vo"
 	"encoding/json"
 	"flag"
 	"fmt"

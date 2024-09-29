@@ -43,7 +43,7 @@ const LoginTypedData = `{
         ]
     },
     "domain": {
-        "name": "MessageChannelLogin",
+        "name": "MessageSharingLogin",
         "version": "1",
         "chainId": "%d"
     },
@@ -92,17 +92,17 @@ const MessageSendTypedData = `{
                 "type": "uint256"
             },
             {
-                "name": "contract_address",
+                "name": "to_business_contract",
                 "type": "address"
             },
             {
-                "name": "data",
+                "name": "to_message",
                 "type": "bytes"
             }
         ]
     },
     "domain": {
-        "name": "B2MessageBridge",
+        "name": "B2MessageSharing",
         "version": "1",
         "chainId": "%d",
         "verifyingContract": "%s"
@@ -113,8 +113,8 @@ const MessageSendTypedData = `{
         "from_id": "%s",
         "from_sender": "%s",
         "to_chain_id": "%d",
-        "contract_address": "%s",
-        "data": "%s"
+        "to_business_contract": "%s",
+        "to_message": "%s"
     }
 }`
 

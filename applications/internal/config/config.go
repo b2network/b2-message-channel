@@ -1,7 +1,7 @@
 package config
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/enums"
+	"bsquared.network/b2-message-sharing-applications/internal/enums"
 	"fmt"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"

@@ -1,6 +1,5 @@
 const {ethers, network} = require("hardhat");
 
-
 async function main() {
     /**
      * # dev
@@ -14,7 +13,8 @@ async function main() {
     console.log("Owner Address: ", owner.address);
     let messageAddress;
     if (network.name == 'b2dev') {
-        messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        // messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        messageAddress = "0xDf5b12f094cf9b12eb2523cC43a62Dd6787D7AB8";
     } else if (network.name == 'asdev') {
         messageAddress = "0x2A82058E46151E337Baba56620133FC39BD5B71F";
     } else if (network.name == 'b2') {
@@ -23,12 +23,13 @@ async function main() {
         messageAddress = "";
     }
     console.log("Message Address: ", messageAddress);
-    // bridge
-    const bridge = await ethers.getContractFactory("B2MessageBridge");
-    const instance = await bridge.attach(messageAddress);
+    // B2MessageSharing
+    const B2MessageSharing = await ethers.getContractFactory("B2MessageSharing");
+    const instance = await B2MessageSharing.attach(messageAddress);
     // TODO
     // let role = await instance.ADMIN_ROLE(); // admin role
     // let role = await instance.UPGRADE_ROLE(); // upgrade role
+    // let chainId = 0;
     let chainId = 421614;
     let role = await instance.validatorRole(chainId); // validatorRole(uint256 chain_id)
     console.log("role hash: ", role);

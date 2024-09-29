@@ -1,15 +1,15 @@
-# b2-message-channel
+# b2-message-sharing
 
-Message-channel is a blockchain cross-chain messaging mechanism.
+Message-sharing is a blockchain cross-chain messaging mechanism.
 
 ## 1. Contracts
 
 ### 1.1 Contracts interface
 
-#### 1.1.1 Message Bridge Interface
+#### 1.1.1 Message Sharing Interface
 
 ```
-interface IB2MessageBridge {
+interface IB2MessageSharing {
 
     /**
      * Get the validator role for a specific chain
@@ -24,11 +24,11 @@ interface IB2MessageBridge {
      * @param from_id The ID of the cross-chain message, used to uniquely identify the message.
      * @param from_sender The address of the sender on the originating chain.
      * @param to_chain_id The ID of the target chain, where the message will be sent.
-     * @param contract_address The address of the target contract that will receive the cross-chain message.
-     * @param data The input data for the target contract's cross-chain call.
+     * @param to_business_contract The address of the target contract that will receive the cross-chain message.
+     * @param to_message The input data for the target contract's cross-chain call.
      * @return bytes32 The generated message hash, used for subsequent verification and processing.
      */
-    function SendHash(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address contract_address, bytes calldata data) external view returns (bytes32);
+    function SendHash(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address to_business_contract, bytes calldata to_message) external view returns (bytes32);
 
     /**
      * Verify the legitimacy of a message
@@ -36,12 +36,12 @@ interface IB2MessageBridge {
      * @param from_id The ID of the cross-chain message, used to check if the message has already been processed.
      * @param from_sender The address of the sender on the originating chain, used to verify the sender's legitimacy.
      * @param to_chain_id The ID of the target chain, indicating where the message will be sent.
-     * @param contract_address The address of the target contract that will receive the cross-chain message.
-     * @param data The input data for the target contract's cross-chain call.
+     * @param to_business_contract The address of the target contract that will receive the cross-chain message.
+     * @param to_message The input data for the target contract's cross-chain call.
      * @param signature The signature of the message, used to verify its legitimacy and integrity.
      * @return bool Returns true if the verification succeeds, and false if it fails.
      */
-    function verify(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address contract_address, bytes calldata data, bytes calldata signature) external view returns (bool);
+    function verify(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address to_business_contract, bytes calldata to_message, bytes calldata signature) external view returns (bool);
 
     /**
      * Set the weight for message processing
@@ -53,22 +53,22 @@ interface IB2MessageBridge {
     /**
      * Request cross-chain message data
      * @param to_chain_id The ID of the target chain, specifying where the message will be sent.
-     * @param contract_address The address of the target contract that will receive the cross-chain message.
-     * @param data The input data for the target contract's cross-chain call.
+     * @param to_business_contract The address of the target contract that will receive the cross-chain message.
+     * @param to_message The input data for the target contract's cross-chain call.
      * @return from_id The ID of the cross-chain message, returning a unique identifier to track the request.
      */
-    function call(uint256 to_chain_id, address contract_address, bytes calldata data) external returns (uint256 from_id);
+    function call(uint256 to_chain_id, address to_business_contract, bytes calldata to_message) external returns (uint256 from_id);
 
     /**
      * Confirm cross-chain message data
      * @param from_chain_id The ID of the originating chain, used to validate the source of the message.
      * @param from_id The ID of the cross-chain message, used to check if the message has already been processed.
      * @param from_sender The address of the sender on the originating chain (msg.sender), used to determine the sender's security based on business needs.
-     * @param contract_address The address of the target contract, indicating where the message will be sent (can be a contract on the target chain or the current chain).
-     * @param data The input data for the target contract's cross-chain call.
+     * @param to_business_contract The address of the target contract, indicating where the message will be sent (can be a contract on the target chain or the current chain).
+     * @param to_message The input data for the target contract's cross-chain call.
      * @param signatures An array of signatures used to verify the legitimacy of the message, ensuring only authorized senders can send the message.
      */
-    function send(uint256 from_chain_id, uint256 from_id, address from_sender, address contract_address, bytes calldata data, bytes[] calldata signatures) external;
+    function send(uint256 from_chain_id, uint256 from_id, address from_sender, address to_business_contract, bytes calldata to_message, bytes[] calldata signatures) external;
 
     /**
      * Set the validator role for a specific chain
@@ -81,8 +81,8 @@ interface IB2MessageBridge {
     // Event declarations
     event SetWeight(uint256 chain_id, uint256 weight); // Event emitted when weight is set
     event SetValidatorRole(uint256 chain_id, address account, bool valid); // Event emitted when validator role is set
-    event Send(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address contract_address, bytes data); // Event emitted when a message is sent
-    event Call(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address contract_address, bytes data); // Event emitted when a message call is made
+    event Send(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address to_business_contract, bytes to_message); // Event emitted when a message is sent
+    event Call(uint256 from_chain_id, uint256 from_id, address from_sender, uint256 to_chain_id, address to_business_contract, bytes to_message); // Event emitted when a message call is made
 }
 ```
 
@@ -95,23 +95,22 @@ interface IBusinessContract {
      * @param from_chain_id The ID of the originating chain, used to validate the source of the message.
      * @param from_id The ID of the cross-chain message, used to check if the message has already been processed to prevent duplication.
      * @param from_sender The address of the sender on the originating chain, used to verify the sender's legitimacy (business needs may dictate whether verification is necessary).
-     * @param data The input data for processing the cross-chain message, which may need to be decoded based on byte encoding rules.
+     * @param message The input data for processing the cross-chain message, which may need to be decoded based on byte encoding rules.
      * @return success Indicates whether the message processing was successful, returning true for success and false for failure.
      */
-    function send(uint256 from_chain_id, uint256 from_id, address from_sender, bytes calldata data) external returns (bool success);
+    function send(uint256 from_chain_id, uint256 from_id, address from_sender, bytes calldata message) external returns (bool success);
 }
-
 ```
 
 ### 1.2 Contracts code
 
-#### 1.2.1 Message Bridge
+#### 1.2.1 Message Sharing
 
-[MessageBridge.sol](./contracts/contracts/message/MessageBridge.sol)
+[MessageSharing.sol](./contracts/contracts/message/MessageSharing.sol)
 
 #### 1.2.2 Business Contract Example
 
-[BusinessContractExample.sol](./contracts/contracts/business/BusinessContractExample.sol)
+[BusinessContractExample.sol](contracts/contracts/business/example/BusinessContractExample.sol)
 
 ### 1.3 Deploy
 
@@ -183,14 +182,14 @@ yarn hardhat run scripts/business/revoke_role.js --network b2dev
 #### 1.4.1 Bsquared testnet
 
 ```
-B2MessageBridge: 0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5
+B2MessageSharing: 0xDf5b12f094cf9b12eb2523cC43a62Dd6787D7AB8
 BusinessContract: 0x804641e29f5F63a037022f0eE90A493541cCb869
 ```
 
 #### 1.4.2 Arbitrum sepolia
 
 ```
-B2MessageBridge: 0x2A82058E46151E337Baba56620133FC39BD5B71F
+B2MessageSharing: 0x2A82058E46151E337Baba56620133FC39BD5B71F
 BusinessContract: 0x8Ac2C830532d7203a12C4C32C0BE4d3d15917534
 ```
 

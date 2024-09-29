@@ -1,13 +1,13 @@
 package proposer
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
-	"bsquared.network/b2-message-channel-applications/internal/enums"
-	"bsquared.network/b2-message-channel-applications/internal/models"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/message"
-	"bsquared.network/b2-message-channel-applications/internal/utils/log"
-	"bsquared.network/b2-message-channel-applications/internal/utils/tx"
-	"bsquared.network/b2-message-channel-applications/internal/vo"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/enums"
+	"bsquared.network/b2-message-sharing-applications/internal/models"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/message"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/tx"
+	"bsquared.network/b2-message-sharing-applications/internal/vo"
 	"bufio"
 	"context"
 	"crypto/ecdsa"

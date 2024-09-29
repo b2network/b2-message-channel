@@ -7,11 +7,11 @@ const AS = {
 }
 
 const B2 = {
-    RPC_URL: process.env.B2_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_PRIVATE_KEY_0 || ""],
+    RPC_URL: process.env.B2_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.B2_PRIVATE_KEY_0 || ""],
 }
 
 const B2_DEV = {
-    RPC_URL: process.env.B2_DEV_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.AS_DEV_PRIVATE_KEY_0 || ""],
+    RPC_URL: process.env.B2_DEV_RPC_URL || "", PRIVATE_KEY_LIST: [process.env.B2_DEV_PRIVATE_KEY_0 || ""],
 }
 
 const AS_DEV = {

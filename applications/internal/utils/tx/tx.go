@@ -1,11 +1,11 @@
 package tx
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
-	"bsquared.network/b2-message-channel-applications/internal/types"
-	"bsquared.network/b2-message-channel-applications/internal/utils/aa"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/event"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/message"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/types"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/aa"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/event"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/message"
 	"bytes"
 	"context"
 	"encoding/hex"

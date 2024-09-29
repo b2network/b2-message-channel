@@ -1,12 +1,12 @@
 package validator
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
-	"bsquared.network/b2-message-channel-applications/internal/enums"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/message"
-	"bsquared.network/b2-message-channel-applications/internal/utils/log"
-	"bsquared.network/b2-message-channel-applications/internal/utils/tx"
-	"bsquared.network/b2-message-channel-applications/internal/vo"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/enums"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/message"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/tx"
+	"bsquared.network/b2-message-sharing-applications/internal/vo"
 	"bufio"
 	"context"
 	"crypto/ecdsa"
@@ -196,7 +196,8 @@ func (v *Validator) handleMessage(msg vo.Message) error {
 	} else {
 		return errors.New("rpc invalid")
 	}
-
+	fmt.Printf("data :%s\n", msg.Data)
+	fmt.Printf("validator :%s\n", crypto_.PubkeyToAddress(v.pk.PublicKey))
 	signature, err := message.SignMessageSend(msg.ChainId, msg.ToMessageContract, msg.FromChainId, common.HexToHash(msg.FromId).Big(), msg.FromSender, msg.ToChainId, msg.ToContractAddress, msg.Data, v.pk)
 	if err != nil {
 		v.logger.Errorf("validator sign err: %s", err)

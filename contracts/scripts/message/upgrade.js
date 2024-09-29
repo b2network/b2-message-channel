@@ -13,7 +13,8 @@ async function main() {
     console.log("Owner Address:", owner.address);
     let messageAddress = '';
     if (network.name == 'b2dev') {
-        messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        // messageAddress = "0xe55c8D6D7Ed466f66D136f29434bDB6714d8E3a5";
+        messageAddress = "0xDf5b12f094cf9b12eb2523cC43a62Dd6787D7AB8";
     } else if (network.name == 'asdev') {
         messageAddress = "0x2A82058E46151E337Baba56620133FC39BD5B71F";
     } else if (network.name == 'b2') {
@@ -24,9 +25,9 @@ async function main() {
     console.log("Message Address: ", messageAddress);
 
     // Upgrading
-    const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");
-    const upgraded = await upgrades.upgradeProxy(messageAddress, B2MessageBridge);
-    console.log("B2MessageBridge upgraded:", upgraded.target);
+    const B2MessageSharing = await ethers.getContractFactory("B2MessageSharing");
+    const upgraded = await upgrades.upgradeProxy(messageAddress, B2MessageSharing);
+    console.log("B2MessageSharing upgraded:", upgraded.target);
 }
 
 main()

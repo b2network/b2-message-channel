@@ -23,9 +23,9 @@ async function main() {
         messageAddress = "";
     }
     console.log("Message Address: ", messageAddress);
-    // bridge
-    const bridge = await ethers.getContractFactory("B2MessageBridge");
-    const instance = await bridge.attach(messageAddress);
+    // B2MessageSharing
+    const B2MessageSharing = await ethers.getContractFactory("B2MessageSharing");
+    const instance = await B2MessageSharing.attach(messageAddress);
     // TODO
     let role = await instance.ADMIN_ROLE(); // admin role
     // role = await instance.UPGRADE_ROLE(); // upgrade role

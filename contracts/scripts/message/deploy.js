@@ -12,10 +12,10 @@ async function main() {
     const [owner] = await ethers.getSigners()
     console.log("Owner Address:", owner.address); // 0x2BC22b1754ff4aDea4Ef9bdF9b16A7210bC45579
 
-    const B2MessageBridge = await ethers.getContractFactory("B2MessageBridge");
-    const instance = await upgrades.deployProxy(B2MessageBridge);
+    const B2MessageSharing = await ethers.getContractFactory("B2MessageSharing");
+    const instance = await upgrades.deployProxy(B2MessageSharing);
     await instance.waitForDeployment();
-    console.log("B2MessageBridge Address:", instance.target);
+    console.log("B2MessageSharing Address:", instance.target);
 }
 
 main()

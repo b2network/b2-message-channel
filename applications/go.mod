@@ -1,4 +1,4 @@
-module bsquared.network/b2-message-channel-applications
+module bsquared.network/b2-message-sharing-applications
 
 go 1.22
 

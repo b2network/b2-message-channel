@@ -1,12 +1,12 @@
 package ethereum
 
 import (
-	"bsquared.network/b2-message-channel-applications/internal/config"
-	"bsquared.network/b2-message-channel-applications/internal/enums"
-	"bsquared.network/b2-message-channel-applications/internal/models"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/event"
-	"bsquared.network/b2-message-channel-applications/internal/utils/ethereum/event/message"
-	"bsquared.network/b2-message-channel-applications/internal/utils/log"
+	"bsquared.network/b2-message-sharing-applications/internal/config"
+	"bsquared.network/b2-message-sharing-applications/internal/enums"
+	"bsquared.network/b2-message-sharing-applications/internal/models"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/event"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/event/message"
+	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
 	"context"
 	"fmt"
 	"github.com/ethereum/go-ethereum"
