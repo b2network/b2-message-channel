@@ -29,7 +29,8 @@ async function main() {
 
     let _weight = 1;
     // let chainId = 0;
-    let chainId = 421614;
+    // let chainId = 421614;
+    let chainId = 1123;
 
     let weight = await instance.weights(chainId);
     console.log("weight: ", weight);

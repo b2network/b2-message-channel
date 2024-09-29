@@ -1212,8 +1212,8 @@
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/business/tokenLocker/Lock.sol": {
-      "lastModificationDate": 1727572796847,
-      "contentHash": "f34a857c9a2b8bbb2ce640f4e247025f",
+      "lastModificationDate": 1727611193601,
+      "contentHash": "3a1cb54ce50162160d831faeee75b660",
       "sourceName": "contracts/business/tokenLocker/Lock.sol",
       "solcConfig": {
         "version": "0.8.20",

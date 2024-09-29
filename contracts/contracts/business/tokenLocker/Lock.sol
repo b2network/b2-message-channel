@@ -47,6 +47,14 @@ contract TokenLockerContract is IBusinessContract, Initializable, UUPSUpgradeabl
         messageSharing = IB2MessageSharing(sharing_address);
     }
 
+    function setLocks(uint256 chain_id,address lock_address) external onlyRole(ADMIN_ROLE) {
+        locks[chain_id] = lock_address;
+    }
+
+    function setTokens(uint256 chain_id, address token_address ,address to_token_address) external onlyRole(ADMIN_ROLE) {
+        tokens[chain_id][token_address] = to_token_address;
+    }
+
     mapping (uint256 => address) public locks;
     mapping (uint256 => mapping (uint256 => bool)) public ids;
     mapping (uint256 => mapping (address => address)) public tokens;

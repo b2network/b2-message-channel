@@ -30,7 +30,8 @@ async function main() {
     // let role = await instance.ADMIN_ROLE(); // admin role
     // let role = await instance.UPGRADE_ROLE(); // upgrade role
     // let chainId = 0;
-    let chainId = 421614;
+    // let chainId = 421614;
+    let chainId = 1123;
     let role = await instance.validatorRole(chainId); // validatorRole(uint256 chain_id)
     console.log("role hash: ", role);
 
