@@ -45,7 +45,7 @@ func main() {
 		if err != nil {
 			logger.Panicf("init ethereum rpc err: %s", err)
 		}
-		builder.NewBuilder(cfg.Bsquared.Builders, cfg.Arbitrum, db, rpc, logger).Start()
+		builder.NewBuilder(cfg.Arbitrum.Builders, cfg.Arbitrum, db, rpc, logger).Start()
 	}()
 	logger.Info("======================================================")
 	select {}
