@@ -1,7 +1,7 @@
 package models
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/enums"
+	"bsquared.network/message-sharing-applications/internal/enums"
 	"github.com/shopspring/decimal"
 )
 

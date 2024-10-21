@@ -1,7 +1,7 @@
 package vo
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/enums"
+	"bsquared.network/message-sharing-applications/internal/enums"
 	"github.com/btcsuite/btcd/rpcclient"
 	"github.com/ethereum/go-ethereum/ethclient"
 )

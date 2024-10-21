@@ -1,12 +1,12 @@
 package validator
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/config"
-	"bsquared.network/b2-message-sharing-applications/internal/enums"
-	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/message"
-	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
-	"bsquared.network/b2-message-sharing-applications/internal/utils/tx"
-	"bsquared.network/b2-message-sharing-applications/internal/vo"
+	"bsquared.network/message-sharing-applications/internal/config"
+	"bsquared.network/message-sharing-applications/internal/enums"
+	"bsquared.network/message-sharing-applications/internal/utils/ethereum/message"
+	"bsquared.network/message-sharing-applications/internal/utils/log"
+	"bsquared.network/message-sharing-applications/internal/utils/tx"
+	"bsquared.network/message-sharing-applications/internal/vo"
 	"bufio"
 	"context"
 	"crypto/ecdsa"

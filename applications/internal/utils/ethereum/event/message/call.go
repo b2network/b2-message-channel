@@ -1,7 +1,7 @@
 package message
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/utils/ethereum/event"
+	"bsquared.network/message-sharing-applications/internal/utils/ethereum/event"
 	"encoding/json"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"

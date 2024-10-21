@@ -1,6 +1,6 @@
 package models
 
-import "bsquared.network/b2-message-sharing-applications/internal/enums"
+import "bsquared.network/message-sharing-applications/internal/enums"
 
 type SyncTask struct {
 	Base

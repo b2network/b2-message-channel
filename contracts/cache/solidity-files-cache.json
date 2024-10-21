@@ -1,50 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/business/example/BusinessContractExample.sol": {
-      "lastModificationDate": 1727565914587,
-      "contentHash": "a06f9fca36c78543e58f14b62f94a097",
-      "sourceName": "contracts/business/example/BusinessContractExample.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "BusinessContractExample",
-        "IBusinessContract"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
       "lastModificationDate": 1727232135596,
       "contentHash": "61a6b098d98b3b945beb7d9de481c025",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
@@ -86,7 +43,7 @@
         "AccessControlUpgradeable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
       "lastModificationDate": 1727232135857,
       "contentHash": "f0cedd674b4863ee90d1521a92ab82df",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -123,7 +80,7 @@
         "Initializable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
       "lastModificationDate": 1727232135876,
       "contentHash": "0488cb927068c0c94b864ea40a34d1ea",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
@@ -164,7 +121,7 @@
         "UUPSUpgradeable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
       "lastModificationDate": 1727232135618,
       "contentHash": "184b684b7ed971771381712181df4367",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
@@ -205,7 +162,7 @@
         "EIP712Upgradeable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
       "lastModificationDate": 1727232135613,
       "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
@@ -244,7 +201,7 @@
         "ContextUpgradeable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
       "lastModificationDate": 1727232135679,
       "contentHash": "ea9d297971734d541e82cc31ec88b84f",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
@@ -282,6 +239,2007 @@
       ],
       "artifacts": [
         "ERC165Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1727232135965,
+      "contentHash": "e3a14b0714caaaa82d58fa0bc3756079",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1727232135992,
+      "contentHash": "de0163561b417b800d01749cbbe2147e",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
+      "lastModificationDate": 1727232135846,
+      "contentHash": "5a6f0412127636d802db818a7d6ac404",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1822Proxiable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
+      "lastModificationDate": 1727232135893,
+      "contentHash": "838bc3ef3bcf0376af7d9b2041989b6a",
+      "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../beacon/IBeacon.sol",
+        "../../utils/Address.sol",
+        "../../utils/StorageSlot.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC1967Utils"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1727232135811,
+      "contentHash": "79c699f80eb8a9b168cb34e37816f894",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1727232136046,
+      "contentHash": "08cbccfefa284405c12b4bfa8c8c9c2b",
+      "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "StorageSlot"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
+      "lastModificationDate": 1727232135974,
+      "contentHash": "0a5c323fd908535580597848b8e550fb",
+      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBeacon"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
+      "lastModificationDate": 1727232136007,
+      "contentHash": "94364524cb1a39dcbc3d3afff6d8e53e",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC5267.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC5267"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
+      "lastModificationDate": 1727232136032,
+      "contentHash": "9e5eec59eaffa554d6cca561dcb914eb",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "MessageHashUtils"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1727232136047,
+      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1727232136028,
+      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1727232136046,
+      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1727232135886,
+      "contentHash": "6a55c353946e471d9792965d06208295",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1727232135786,
+      "contentHash": "4c80b7fdf559a9a348e832a57d072a0b",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1727232135838,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1727232135852,
+      "contentHash": "b96e0d7a3c2b185342c7d083d765b61f",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1727232136044,
+      "contentHash": "697fd27924863e77c17dace2179018b2",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1727232136000,
+      "contentHash": "da291753fa4641f2c5837bfc4aa4c01b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1727232135997,
+      "contentHash": "5517c8678c18eb1a8ba58810e7ca39ca",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1727232135999,
+      "contentHash": "4c02fa6f7ae7b6c289cef80424f0c875",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1727232135900,
+      "contentHash": "c6375ef25e84c90b3d15f9ec4eef218f",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1727232135848,
+      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol": {
+      "lastModificationDate": 1727232135817,
+      "contentHash": "9f0f228c1bdec68e130ab539644f8887",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/interfaces/IERC4906.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721URIStorageUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol": {
+      "lastModificationDate": 1727232135816,
+      "contentHash": "63787651bcdb931377c7c0deb863edbd",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../utils/introspection/ERC165Upgradeable.sol",
+        "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC4906.sol": {
+      "lastModificationDate": 1727232136007,
+      "contentHash": "7f130e0d70179d683e9b9df0dda38a51",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC4906.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol",
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC4906"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1727232136016,
+      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1727232136011,
+      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1727232136015,
+      "contentHash": "12c206f185cb951213799561fdcaa40d",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC721.sol": {
+      "lastModificationDate": 1727232136011,
+      "contentHash": "d8d23fc2f55ed934d1a1b91c9afd8526",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC165.sol": {
+      "lastModificationDate": 1727232135991,
+      "contentHash": "f808b485ee0cdc6768ee8385ae5f9a2a",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
+      "lastModificationDate": 1727232136013,
+      "contentHash": "3fdc14aab706458ae99314f6f7f529a2",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol": {
+      "lastModificationDate": 1727232135796,
+      "contentHash": "ed34441dcf15751f613899f10afa055c",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721EnumerableUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol": {
+      "lastModificationDate": 1727232135773,
+      "contentHash": "3fbc400ba26c6ff58dce1fc99cda6322",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/interfaces/IERC2981.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../utils/introspection/ERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC2981Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol": {
+      "lastModificationDate": 1727232136002,
+      "contentHash": "a121ffbe9ad90f8eb00e40e96adc5a42",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC2981.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC2981"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol": {
+      "lastModificationDate": 1727232135790,
+      "contentHash": "206b6ee9c37f4c56c57e37962b5d807a",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "../../../utils/ContextUpgradeable.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721BurnableUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/message_sharing/MessageSharing.sol": {
+      "lastModificationDate": 1727580611043,
+      "contentHash": "8e99d74ada1a3fa28cf9d10cfe2c8ad6",
+      "sourceName": "contracts/message_sharing/MessageSharing.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "B2MessageSharing",
+        "IB2MessageSharing",
+        "IBusinessContract"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/token_bridge/TokenBridge.sol": {
+      "lastModificationDate": 1728403984483,
+      "contentHash": "fa95c7456ca2ba02999681426ffa6a05",
+      "sourceName": "contracts/examples/token_bridge/TokenBridge.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "TokenBridge"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/nft_bridge/NftBridge.sol": {
+      "lastModificationDate": 1728404023167,
+      "contentHash": "1e3153ec0ac0417139ae60967ef42384",
+      "sourceName": "contracts/examples/nft_bridge/NftBridge.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IERC1155",
+        "IERC721",
+        "IMessageSharing",
+        "NftBridge"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/message_channel/MessageChannel.sol": {
+      "lastModificationDate": 1728433153170,
+      "contentHash": "81ed86899f08b04cde99649f2d22aa23",
+      "sourceName": "contracts/examples/message_channel/MessageChannel.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "MessageChannel"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/erc721/MyERC721.sol": {
+      "lastModificationDate": 1728392684183,
+      "contentHash": "b303867fa9a1c5a99e809f1503d8a888",
+      "sourceName": "contracts/examples/erc721/MyERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyERC721"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol": {
+      "lastModificationDate": 1727232135811,
+      "contentHash": "c1db986565615302e4b8da7d5224c280",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "../../common/ERC2981Upgradeable.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721RoyaltyUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/erc20/MyERC20.sol": {
+      "lastModificationDate": 1728354090173,
+      "contentHash": "6eb80143fbc67b6a79f1da8ff8e56384",
+      "sourceName": "contracts/examples/erc20/MyERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/AccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol": {
+      "lastModificationDate": 1727232135868,
+      "contentHash": "ef20fd32f5bdcc50bd466abc8fc7f181",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "PausableUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/orderbook/Cashier.sol": {
+      "lastModificationDate": 1728553160644,
+      "contentHash": "cae5b7756330006bf519023b7708616c",
+      "sourceName": "contracts/examples/orderbook/Cashier.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/Address.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Cashier",
+        "IBusinessContract",
+        "IMessageSharing"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/message-sharing/contracts/contracts/examples/orderbook/Orderbook.sol": {
+      "lastModificationDate": 1728553387556,
+      "contentHash": "51acea9ad2b6c3633497e1476b901a8b",
+      "sourceName": "contracts/examples/orderbook/Orderbook.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "Orderbook"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/erc20/MyERC20.sol": {
+      "lastModificationDate": 1728354090173,
+      "contentHash": "6eb80143fbc67b6a79f1da8ff8e56384",
+      "sourceName": "contracts/examples/erc20/MyERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/AccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1727232135786,
+      "contentHash": "4c80b7fdf559a9a348e832a57d072a0b",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1727232135900,
+      "contentHash": "c6375ef25e84c90b3d15f9ec4eef218f",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1727232135838,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1727232135886,
+      "contentHash": "6a55c353946e471d9792965d06208295",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
@@ -358,10 +2316,10 @@
         "IERC165"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
-      "lastModificationDate": 1727232135846,
-      "contentHash": "5a6f0412127636d802db818a7d6ac404",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1727232135997,
+      "contentHash": "5517c8678c18eb1a8ba58810e7ca39ca",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -392,7 +2350,200 @@
         "^0.8.20"
       ],
       "artifacts": [
-        "IERC1822Proxiable"
+        "IERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1727232135848,
+      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1727232135999,
+      "contentHash": "4c02fa6f7ae7b6c289cef80424f0c875",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1727232136044,
+      "contentHash": "697fd27924863e77c17dace2179018b2",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1727232135811,
+      "contentHash": "79c699f80eb8a9b168cb34e37816f894",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1727232136000,
+      "contentHash": "da291753fa4641f2c5837bfc4aa4c01b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Permit"
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
@@ -436,10 +2587,10 @@
         "ERC1967Utils"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1727232135811,
-      "contentHash": "79c699f80eb8a9b168cb34e37816f894",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
+      "lastModificationDate": 1727232135974,
+      "contentHash": "0a5c323fd908535580597848b8e550fb",
+      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -470,7 +2621,7 @@
         "^0.8.20"
       ],
       "artifacts": [
-        "Address"
+        "IBeacon"
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
@@ -510,10 +2661,51 @@
         "StorageSlot"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
-      "lastModificationDate": 1727232135974,
-      "contentHash": "0a5c323fd908535580597848b8e550fb",
-      "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
+      "lastModificationDate": 1727232135876,
+      "contentHash": "0488cb927068c0c94b864ea40a34d1ea",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
+        "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol",
+        "./Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "UUPSUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1727232135857,
+      "contentHash": "f0cedd674b4863ee90d1521a92ab82df",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -544,7 +2736,881 @@
         "^0.8.20"
       ],
       "artifacts": [
-        "IBeacon"
+        "Initializable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
+      "lastModificationDate": 1727232135846,
+      "contentHash": "5a6f0412127636d802db818a7d6ac404",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1822Proxiable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol": {
+      "lastModificationDate": 1727232135773,
+      "contentHash": "3fbc400ba26c6ff58dce1fc99cda6322",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/common/ERC2981Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/interfaces/IERC2981.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../utils/introspection/ERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC2981Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
+      "lastModificationDate": 1727232135679,
+      "contentHash": "ea9d297971734d541e82cc31ec88b84f",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol": {
+      "lastModificationDate": 1727232136002,
+      "contentHash": "a121ffbe9ad90f8eb00e40e96adc5a42",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC2981.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC2981"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC165.sol": {
+      "lastModificationDate": 1727232135991,
+      "contentHash": "f808b485ee0cdc6768ee8385ae5f9a2a",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC4906.sol": {
+      "lastModificationDate": 1727232136007,
+      "contentHash": "7f130e0d70179d683e9b9df0dda38a51",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC4906.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol",
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC4906"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC721.sol": {
+      "lastModificationDate": 1727232136011,
+      "contentHash": "d8d23fc2f55ed934d1a1b91c9afd8526",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1727232136011,
+      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
+      "lastModificationDate": 1727232136013,
+      "contentHash": "3fdc14aab706458ae99314f6f7f529a2",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol": {
+      "lastModificationDate": 1727232135796,
+      "contentHash": "ed34441dcf15751f613899f10afa055c",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721EnumerableUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol": {
+      "lastModificationDate": 1727232135816,
+      "contentHash": "63787651bcdb931377c7c0deb863edbd",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../utils/introspection/ERC165Upgradeable.sol",
+        "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1727232136047,
+      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1727232135613,
+      "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1727232136016,
+      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1727232136015,
+      "contentHash": "12c206f185cb951213799561fdcaa40d",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1727232136028,
+      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1727232136046,
+      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol": {
+      "lastModificationDate": 1727232135790,
+      "contentHash": "206b6ee9c37f4c56c57e37962b5d807a",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "../../../utils/ContextUpgradeable.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721BurnableUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
+      "lastModificationDate": 1727232135596,
+      "contentHash": "61a6b098d98b3b945beb7d9de481c025",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/IAccessControl.sol",
+        "../utils/ContextUpgradeable.sol",
+        "../utils/introspection/ERC165Upgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AccessControlUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/message_sharing/MessageSharing.sol": {
+      "lastModificationDate": 1729481042434,
+      "contentHash": "ae137b08fc297bade4af84ffe889cedd",
+      "sourceName": "contracts/message_sharing/MessageSharing.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "MessageSharing"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
+      "lastModificationDate": 1727232135618,
+      "contentHash": "184b684b7ed971771381712181df4367",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+        "@openzeppelin/contracts/interfaces/IERC5267.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "EIP712Upgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1727232135852,
+      "contentHash": "b96e0d7a3c2b185342c7d083d765b61f",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ECDSA"
       ]
     },
     "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
@@ -623,10 +3689,10 @@
         "MessageHashUtils"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1727232136047,
-      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol": {
+      "lastModificationDate": 1727232135817,
+      "contentHash": "9f0f228c1bdec68e130ab539644f8887",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -653,211 +3719,23 @@
         }
       },
       "imports": [
-        "./math/Math.sol",
-        "./math/SignedMath.sol"
+        "../ERC721Upgradeable.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/interfaces/IERC4906.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../../../proxy/utils/Initializable.sol"
       ],
       "versionPragmas": [
         "^0.8.20"
       ],
       "artifacts": [
-        "Strings"
+        "ERC721URIStorageUpgradeable"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1727232136028,
-      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
-      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Math"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
-      "lastModificationDate": 1727232136046,
-      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
-      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SignedMath"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1727232135886,
-      "contentHash": "6a55c353946e471d9792965d06208295",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC165"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1727232135786,
-      "contentHash": "4c80b7fdf559a9a348e832a57d072a0b",
-      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IAccessControl.sol",
-        "../utils/Context.sol",
-        "../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "AccessControl"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1727232135838,
-      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/message/MessageSharing.sol": {
-      "lastModificationDate": 1727580611043,
-      "contentHash": "8e99d74ada1a3fa28cf9d10cfe2c8ad6",
-      "sourceName": "contracts/message/MessageSharing.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/erc721/MyERC721.sol": {
+      "lastModificationDate": 1728392684183,
+      "contentHash": "b303867fa9a1c5a99e809f1503d8a888",
+      "sourceName": "contracts/examples/erc721/MyERC721.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -886,335 +3764,66 @@
       "imports": [
         "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol",
         "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
-        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "B2MessageSharing",
-        "IB2MessageSharing",
-        "IBusinessContract"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
-      "lastModificationDate": 1727232135852,
-      "contentHash": "b96e0d7a3c2b185342c7d083d765b61f",
-      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ECDSA"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
-      "lastModificationDate": 1727232136044,
-      "contentHash": "697fd27924863e77c17dace2179018b2",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC20.sol",
-        "../extensions/IERC20Permit.sol",
-        "../../../utils/Address.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SafeERC20"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1727232135997,
-      "contentHash": "5517c8678c18eb1a8ba58810e7ca39ca",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
-      "lastModificationDate": 1727232136000,
-      "contentHash": "da291753fa4641f2c5837bfc4aa4c01b",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC20Permit"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1727232135999,
-      "contentHash": "4c02fa6f7ae7b6c289cef80424f0c875",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC20Metadata"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1727232135900,
-      "contentHash": "c6375ef25e84c90b3d15f9ec4eef218f",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IERC20.sol",
-        "./extensions/IERC20Metadata.sol",
-        "../../utils/Context.sol",
-        "../../interfaces/draft-IERC6093.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC20"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
-      "lastModificationDate": 1727232135848,
-      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
-    },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/business/tokenLocker/MyERC20.sol": {
-      "lastModificationDate": 1727565994263,
-      "contentHash": "6eb80143fbc67b6a79f1da8ff8e56384",
-      "sourceName": "contracts/business/tokenLocker/MyERC20.sol",
-      "solcConfig": {
-        "version": "0.8.20",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/access/AccessControl.sol"
+        "@openzeppelin/contracts/utils/Strings.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "MyERC20"
+        "MyERC721"
       ]
     },
-    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/business/tokenLocker/Lock.sol": {
-      "lastModificationDate": 1727611193601,
-      "contentHash": "3a1cb54ce50162160d831faeee75b660",
-      "sourceName": "contracts/business/tokenLocker/Lock.sol",
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol": {
+      "lastModificationDate": 1727232135811,
+      "contentHash": "c1db986565615302e4b8da7d5224c280",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721RoyaltyUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721Upgradeable.sol",
+        "../../common/ERC2981Upgradeable.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721RoyaltyUpgradeable"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/token_bridge/TokenBridge.sol": {
+      "lastModificationDate": 1729481072143,
+      "contentHash": "cc7a0505a96cdf7a0da6ad9ed60b7e0b",
+      "sourceName": "contracts/examples/token_bridge/TokenBridge.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {
@@ -1251,9 +3860,189 @@
         "^0.8.20"
       ],
       "artifacts": [
-        "IB2MessageSharing",
         "IBusinessContract",
-        "TokenLockerContract"
+        "IMessageSharing",
+        "TokenBridge"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/orderbook/Orderbook.sol": {
+      "lastModificationDate": 1729481133339,
+      "contentHash": "34eb20a8cb2220cce2050afae75e08ad",
+      "sourceName": "contracts/examples/orderbook/Orderbook.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "Orderbook"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/nft_bridge/NftBridge.sol": {
+      "lastModificationDate": 1729481099314,
+      "contentHash": "aaf6f04c9d8cb19faba39dfe60eaa5c6",
+      "sourceName": "contracts/examples/nft_bridge/NftBridge.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IERC1155",
+        "IERC721",
+        "IMessageSharing",
+        "NftBridge"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/message_channel/MessageChannel.sol": {
+      "lastModificationDate": 1729482400173,
+      "contentHash": "7e841b62e5e629624c12a88711e496d0",
+      "sourceName": "contracts/examples/message_channel/MessageChannel.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IBusinessContract",
+        "IMessageSharing",
+        "MessageChannel"
+      ]
+    },
+    "/Users/m/Workspaces/b2-network/b2-message-sharing/contracts/contracts/examples/orderbook/Cashier.sol": {
+      "lastModificationDate": 1729481124912,
+      "contentHash": "d0fc99f22f6b643bae1c89a6d1845abe",
+      "sourceName": "contracts/examples/orderbook/Cashier.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/Address.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Cashier",
+        "IBusinessContract",
+        "IMessageSharing"
       ]
     }
   }

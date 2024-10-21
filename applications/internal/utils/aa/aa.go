@@ -1,7 +1,7 @@
 package aa
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/utils/particle"
+	"bsquared.network/message-sharing-applications/internal/utils/particle"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"

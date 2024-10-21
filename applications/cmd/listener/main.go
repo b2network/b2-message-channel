@@ -1,11 +1,11 @@
 package main
 
 import (
-	"bsquared.network/b2-message-sharing-applications/internal/config"
-	"bsquared.network/b2-message-sharing-applications/internal/initiates"
-	"bsquared.network/b2-message-sharing-applications/internal/serves/listener/bitcoin"
-	"bsquared.network/b2-message-sharing-applications/internal/serves/listener/ethereum"
-	"bsquared.network/b2-message-sharing-applications/internal/utils/log"
+	"bsquared.network/message-sharing-applications/internal/config"
+	"bsquared.network/message-sharing-applications/internal/initiates"
+	"bsquared.network/message-sharing-applications/internal/serves/listener/bitcoin"
+	"bsquared.network/message-sharing-applications/internal/serves/listener/ethereum"
+	"bsquared.network/message-sharing-applications/internal/utils/log"
 	"encoding/json"
 	"flag"
 	"fmt"
